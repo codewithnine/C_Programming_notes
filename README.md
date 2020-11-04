@@ -1,6 +1,6 @@
 # C Programming Absolute Beginner’s Guide Third Edition
 
-## Part 1 What Is C Programming, and Why Should I Care?
+## Part 1 What Is C Programming, and Why Should I Care
 
 ### Compiler
 
@@ -48,7 +48,7 @@ Integers are whole numbers without decimal points. Floating-point numbers have d
 
 If you use a character, enclose it in single quotes. Strings go inside quotation marks.
 
-Every C command and function needs a semicolon `;` after it to let C know that the line is finished. 
+Every C command and function needs a semicolon `;` after it to let C know that the line is finished.
 Braces and the first lines of functions don't need semicolons because nothing is executing on those lines.
 
 ### `main()`
@@ -56,14 +56,14 @@ Braces and the first lines of functions don't need semicolons because nothing is
 Although at this point the distinction is not critical, `main()` is a C function, not a C command.
 Each program must always include a main() function.
 
-These are functions:          `main()` `calcIt()` `printf()` `strlen()`
-and these are commands:     `return` `while` `int` `if` `float`
+These are functions: `main()` `calcIt()` `printf()` `strlen()`
+and these are commands: `return` `while` `int` `if` `float`
 
-One of the functions just listed, `calcIt()`, contains an uppercase letter. 
-However, the preceding section said you should stay away from uppercase letters. 
-If a name has multiple parts, as in `doReportPrint()`, 
-it's common practice to use uppercase letters to begin the separate words, to increase readability. 
-(Spaces aren't allowed in function names.) Stay away from typing words in all uppercase, 
+One of the functions just listed, `calcIt()`, contains an uppercase letter.
+However, the preceding section said you should stay away from uppercase letters.
+If a name has multiple parts, as in `doReportPrint()`,
+it's common practice to use uppercase letters to begin the separate words, to increase readability.
+(Spaces aren't allowed in function names.) Stay away from typing words in all uppercase,
 but an uppercase letter for clarity once in a while is okay.
 
 The required `main()` function and all of C's supplied function names must contain lowercase letters.
@@ -71,9 +71,9 @@ You can use uppercase for the functions that you write, but most C programmers s
 lowercase function name convention.
 
 Just as the home page is the beginning place to surf a website, `main()` is always the first place the
-computer begins when running your program. 
+computer begins when running your program.
 
-Even if `main()` is not the first function listed in your program, 
+Even if `main()` is not the first function listed in your program,
 `main()` still determines the beginning of the program's execution.
 
 Therefore, for readability, make `main()` the first function in every program you write.
@@ -91,9 +91,9 @@ the following three data types are by far the most common used in C programming:
 • Floating points (also called real numbers)
 
 A C character is any single character that your computer can represent. Your computer knows 256
-different characters. 
+different characters.
 Each of them is found in something called the ASCII table.
-The American National Standards Institute (ANSI), which developed ANSI C, 
+The American National Standards Institute (ANSI), which developed ANSI C,
 also developed the code for the ASCII chart.
 
 As you can see, every letter, number, and space is a character to C. Sure, a `4` looks like a number,
@@ -127,8 +127,8 @@ printf("01- my name is %s\n", name);
 
 ### `printf()`
 
- No actual command performs output, but the `printf()` function is a part of every C compiler and one of
- the most used features of the language. `printf()` sends characters, numbers, and words to the screen.
+No actual command performs output, but the `printf()` function is a part of every C compiler and one of
+the most used features of the language. `printf()` sends characters, numbers, and words to the screen.
 
 The format is the general look of the statement. If something in a format appears in brackets,
 such as , data in the printf function just shown, that part of the statement is optional. You
@@ -167,7 +167,7 @@ C does not automatically move the cursor down to the next line when a `printf()`
 executes. You must insert an escape sequence in the controlString if you want C
 to go to the next line after a `printf()`.
 
-The statement `#include <stdio.h>` is needed in almost every C program. 
+The statement `#include <stdio.h>` is needed in almost every C program.
 
 It helps with printing and getting data.
 
@@ -184,28 +184,28 @@ characters \ and a actually being printed.
 C contains a lot of escape sequences, and you'll use some of them in almost every program you write.
 Here is a list of some of the more popular escape sequences.
 
-| (Escape sequence) (Hex value in ASCII) | (Character represented) | Alert (Beep, Bell) (added in C89)[1]                         |
-| -------------------------------------- | ----------------------- | ------------------------------------------------------------ |
-| \a                                     | 07                      | Backspace                                                    |
-| \b                                     | 08                      | Escape character                                             |
-| \e                                     | 1B                      | Formfeed Page Break                                          |
-| \f                                     | 0C                      | Newline (Line Feed); see notes below                         |
-| \n                                     | 0A                      | Carriage Return                                              |
-| \r                                     | 0D                      | Horizontal Tab                                               |
-| \t                                     | 09                      | Vertical Tab                                                 |
-| \v                                     | 0B                      | Backslash                                                    |
-| \\                                     | 5C                      | Apostrophe or single quotation mark                          |
-| \'                                     | 27                      | Double quotation mark                                        |
-| \"                                     | 22                      | Question mark (used to avoid trigraphs)                      |
+| (Escape sequence) (Hex value in ASCII) | (Character represented) | Alert (Beep, Bell) [added in C89](1)                                          |
+| -------------------------------------- | ----------------------- | ----------------------------------------------------------------------------- |
+| \a                                     | 07                      | Backspace                                                                     |
+| \b                                     | 08                      | Escape character                                                              |
+| \e                                     | 1B                      | Formfeed Page Break                                                           |
+| \f                                     | 0C                      | Newline (Line Feed); see notes below                                          |
+| \n                                     | 0A                      | Carriage Return                                                               |
+| \r                                     | 0D                      | Horizontal Tab                                                                |
+| \t                                     | 09                      | Vertical Tab                                                                  |
+| \v                                     | 0B                      | Backslash                                                                     |
+| \\                                     | 5C                      | Apostrophe or single quotation mark                                           |
+| \'                                     | 27                      | Double quotation mark                                                         |
+| \"                                     | 22                      | Question mark (used to avoid trigraphs)                                       |
 | \?                                     | 3F                      | The byte whose numerical value is given by nnn interpreted as an octal number |
-| \nnn                                   | any                     | The byte whose numerical value is given by hh… interpreted as a hex number |
-| \xhh…                                  | any                     | Unicode code point below 10000 hexadecimal                   |
-| \uhhhh                                 | none                    | Unicode code point where h is a hexadecimal digit            |
-| \Uhhhhhhhhn                            | none                    | Unicode code point where h is a hexadecimal digit            |
+| \nnn                                   | any                     | The byte whose numerical value is given by hh… interpreted as a hex number    |
+| \xhh…                                  | any                     | Unicode code point below 10000 hexadecimal                                    |
+| \uhhhh                                 | none                    | Unicode code point where h is a hexadecimal digit                             |
+| \Uhhhhhhhhn                            | none                    | Unicode code point where h is a hexadecimal digit                             |
 
 Double quotation marks begin and end a string, single quotation marks begin and end a character, and
 a backslash signals the start of an escape sequence, so they have their own escape sequences if you
-need to print them. 
+need to print them.
 
 `\a` rings your computer's bell, `\b` moves the cursor back a line, and `\t` causes the
 output to appear moved over a few spaces.
@@ -221,7 +221,7 @@ printf("character \\\" she said\n");
 
 RESULT:
 
-```
+```text
 Column A    Column B    Column C
 My Computer's Beep Sounds Like This: !
 "Let's fix that typo and then show the backslash character \" she
@@ -229,73 +229,73 @@ said
 
 ```
 
-You should understand a few things about the previous listing. 
+You should understand a few things about the previous listing.
 First, you must always place `#include <stdio.h>` at the beginning of all programs that use the
-`printf()` function—it is defined in `stdio.h`, 
-so if you fail to remember that line of code, 
-you will get a compiler error because your program will not understand how to execute `printf()`. 
+`printf()` function—it is defined in `stdio.h`,
+so if you fail to remember that line of code,
+you will get a compiler error because your program will not understand how to execute `printf()`.
 
-Also, different C/C++ compilers might produce a different number of tabbed spaces for the `\t` escape sequence. 
+Also, different C/C++ compilers might produce a different number of tabbed spaces for the `\t` escape sequence.
 
-Finally, it is important to note that using the `\b` escape sequence overwrites anything that was there. 
+Finally, it is important to note that using the `\b` escape sequence overwrites anything that was there.
 
 That's why the '`z`' does not appear in the output, but the '`s`' does.
 
 ## Commenting on Your Code
 
-You will change your programs often, and if you write programs for a company, 
-the company's needs will change over time. 
-You must ensure that your programs are understandable to people as well as to computers. 
+You will change your programs often, and if you write programs for a company,
+the company's needs will change over time.
+You must ensure that your programs are understandable to people as well as to computers.
 Therefore, you should document your programs by explaining what they do.
 
 Even if you write the program, you aren't always able to follow it later—
-you might forget why you wrote a particular chunk of code, 
+you might forget why you wrote a particular chunk of code,
 so a comment will help to decipher matters.
-Add comments as you write your programs. Get in the habit now, 
+Add comments as you write your programs. Get in the habit now,
 because programmers rarely go back and add comments later.
 
-you can scan through your comments, finding sections of code that you need faster. 
+you can scan through your comments, finding sections of code that you need faster.
 
 If you didn't comment, you would have to decipher your C code every time you looked through a piece of it.
-Comments are not C commands. C ignores every comment in your program. 
+Comments are not C commands. C ignores every comment in your program.
 
-Comments are for people, and the programming statements residing outside the comments 
+Comments are for people, and the programming statements residing outside the comments
 are for the computer.
 
-The closer a comment is to spoken language and the further a comment is from C code, 
+The closer a comment is to spoken language and the further a comment is from C code,
 the better the comment is.
 
-Redundant comments are a waste of your time, and they don't add anything to programs. 
-Add comments to explain what is going on to people (including yourself) 
+Redundant comments are a waste of your time, and they don't add anything to programs.
+Add comments to explain what is going on to people (including yourself)
 who might need to read your program.
 
 Many companies require that their programmers embed their own names in comments at the top of
-programs they write. 
-If changes need to be made to the program later, the original programmer can be found to help. 
+programs they write.
+If changes need to be made to the program later, the original programmer can be found to help.
 
 It's also a good idea to include the filename that you use to save the program on disk at
 the beginning of a program so that you can find a program on disk when you run across a printed
 listing.
 
-### C comments begin with /* and end with */
+### C comments begin with /_and end with_/
 
 Today's C compilers support another kind of comment that was originally developed for C++
-programs. 
+programs.
 
 With its C99 release, the American National Standards Institute (ANSI) committee
-approved this new kind of comment, so you should be safe using it 
+approved this new kind of comment, so you should be safe using it
 
-(unless you are using a really, really old computer and compiler!). 
+(unless you are using a really, really old computer and compiler!).
 
 The second style of comment begins with two slashes (`//`) and ends only at the end of the line.
 
-## Numbers in C 
+## Numbers in C
 
-Whole numbers are called integers. 
+Whole numbers are called integers.
 
-Integers have no decimal points. 
+Integers have no decimal points.
 
-(Remember this rule: Like most reality shows, integers have no point whatsoever.) 
+(Remember this rule: Like most reality shows, integers have no point whatsoever.)
 
 Any number without a decimal point is an integer.
 All of the following are integers:
@@ -304,10 +304,10 @@ All of the following are integers:
 Don't use a comma in a number, no matter how big the numbers are!
 Enter the figure 100,000 as `100000`, not 100,000.
 
-Never begin an integer with a leading `0` (unless the number is zero), 
-or C will think you typed the number in hexadecimal or octal. 
+Never begin an integer with a leading `0` (unless the number is zero),
+or C will think you typed the number in hexadecimal or octal.
 
-Hexadecimal and octal, sometimes called base-16 and base-8, respectively, 
+Hexadecimal and octal, sometimes called base-16 and base-8, respectively,
 are weird ways of representing numbers.
 
 `053` is an octal number, and `0x45` is a hexadecimal number. If you don't know what
@@ -315,11 +315,11 @@ all that means, just remember for now that C puts a `hex` on you if you mess aro
 leading zeroes before integers.
 
 Numbers with decimal points are called floating-point numbers. All of the following are floatingpoint numbers:
-`547.43`      `0.0`     `0.44384`     `9.1923`  `–168.470`    `.22`
+`547.43` `0.0` `0.44384` `9.1923` `–168.470` `.22`
 As you can see, leading zeroes are okay in front of floating-point numbers.
 
 Different C compilers use different amounts of storage for integers and floating-point values.
-a floating-point value usually takes twice as much memory as an integer. 
+a floating-point value usually takes twice as much memory as an integer.
 
 Therefore, if you can get away with using integers, do so—
 save floating points for values that need the decimal point.
@@ -339,10 +339,10 @@ Double has 2x more precision then float.
 | 3. Long Double float. (long double) | 10 bytes | 80 bits |
 
 float is a 32 bit IEEE 754 single precision Floating Point Number1 bit for the sign,
-(8 bits for the exponent, and 23* for the value), i.e. float has 7 decimal digits of precision.
+(8 bits for the exponent, and 23\* for the value), i.e. float has 7 decimal digits of precision.
 
 double is a 64 bit IEEE 754 double precision Floating Point Number
-(1 bit for the sign, 11 bits for the exponent, and 52* bits for the value), i.e.
+(1 bit for the sign, 11 bits for the exponent, and 52\* bits for the value), i.e.
 double has 15 decimal digits of precision.
 
 When you print numbers and characters, you must tell C exactly how to print them. You indicate the
@@ -363,10 +363,10 @@ format of numbers with conversion characters. Here is a few of C's most-used con
 | %%                   | (percent character)                                   |
 
 ```c
-printf("%d roses cost %.2f per %d\n", 24, 19.95, 12);  
+printf("%d roses cost %.2f per %d\n", 24, 19.95, 12);
 // 24 roses cost 19.5 per 12
 // 24            19.5     12
-printf("%s %d %c %f\n", "Sam", 14, 'X', -8.76);       
+printf("%s %d %c %f\n", "Sam", 14, 'X', -8.76);
 // Sam 14 X -8.760000
 // Sam 14 X -8.760000
 ```
@@ -380,9 +380,9 @@ single quotation marks, as do all characters.
 You can control how C prints floating-point values by placing a period (`.`) and a number between the
 `%` and the f of the floating-point conversion character.
 
-The number you place determines the number of decimal places your floating-point number prints to. 
+The number you place determines the number of decimal places your floating-point number prints to.
 
-The following `printf()` produces four different-looking numbers, 
+The following `printf()` produces four different-looking numbers,
 even though the same floating-point number is given:
 
 The only reason two spaces appear between the numbers is that the controlString has two spaces between each `%f`.
@@ -406,8 +406,8 @@ printf("%.7f\n", 3.1234567); // 3.1234567
 printf("%.8f\n", 3.1234567); // 3.12345670
 ```
 
-Here is some more code to help you with `printf()`, Escape Sequences, and Conversion Characters/*
- Variables -
+Here is some more code to help you with `printf()`, Escape Sequences, and Conversion Characters/\*
+Variables -
 Variables are little more than boxes in memory that hold values that can change over time.
 We need them to keep track of a lot of things.
 In some older C compilers, int could hold only values between 32767 and
@@ -418,31 +418,31 @@ type.
 Here is some more code to help you with printf(), Escape Sequences, and Conversion Characters
 
 ```c
-printf("Quantity\tCost\tTotal\n");                              
+printf("Quantity\tCost\tTotal\n");
 //  Quantity    Cost    Total
-printf("%d\t\t$%.2f\t$%.2f\n", 3, 9.99, 29.97);                 
+printf("%d\t\t$%.2f\t$%.2f\n", 3, 9.99, 29.97);
 //  3        $9.99    $29.97
 printf("Too many spaces \b\b\b\b can be fixed with the ");
 //  Too many spaces  can be fixed with the \b Escape character
-printf("\\%c Escape character\n", 'b');                         
+printf("\\%c Escape character\n", 'b');
 //
-printf("\n\a\n\a\n\a\n\aSkip a few lines, and beep ");          
+printf("\n\a\n\a\n\a\n\aSkip a few lines, and beep ");
 //  Skip a few lines, and beep a few beeps.
-printf("a few beeps.\n\n\n");                                   
+printf("a few beeps.\n\n\n");
 //
 printf("%s %c.", "You are kicking butt learning", 'C');
 //  You are kicking butt learning C.You just finished chapter 4.
-printf("You just finished chapter %d.\nYou have finished ", 4); 
+printf("You just finished chapter %d.\nYou have finished ", 4);
 //
-printf("%.1f%c of the book.\n", 12.500, '%');                   
+printf("%.1f%c of the book.\n", 12.500, '%');
 //  You have finished 12.5% of the book.
 printf("\n\nOne third equals %.2f or ", 0.333333);
 //  One third equals 0.33 or 0.333 or 0.3333 or 0.33333 or 0.333333
-printf("%.3f or %.4f or ", 0.333333, 0.333333);                 
+printf("%.3f or %.4f or ", 0.333333, 0.333333);
 //
-printf("%.5f or %.6f\n\n\n", 0.333333, 0.3333333);              
+printf("%.5f or %.6f\n\n\n", 0.333333, 0.3333333);
 //
-printf("%f %.3f %.2f %.1f\n", 4.5678, 4.5678, 4.5678, 4.5678);  
+printf("%f %.3f %.2f %.1f\n", 4.5678, 4.5678, 4.5678, 4.5678);
 // 4.567800  4.568  4.57  4.6
 ```
 
@@ -478,13 +478,13 @@ store strings in variables.
 
 ### Naming Variables
 
-All variable names must be different; 
+All variable names must be different;
 
 you can't have two variables in the same program with the same name.
 
 A variable can have from 1 to 31 characters in its name.
 
-Some compilers do allow longer names, but it's better to stick with this limit, 
+Some compilers do allow longer names, but it's better to stick with this limit,
 both for portability of code and to keep typing errors to a minimum.
 
 (After all, the longer the name you use, the greater the chance for a typo!)
@@ -503,11 +503,11 @@ the same name as a function, you can't use that same function name later in your
 program without causing an error.
 
 All of the following are valid variable names:
-`myData`      `pay94`       `age_limit`       `amount`      `QtlyIncome`
+`myData` `pay94` `age_limit` `amount` `QtlyIncome`
 
 The following examples of variable names are not valid:
 
-`94Pay`       `my Age`       `lastname,firstname`
+`94Pay` `my Age` `lastname,firstname`
 
 The first one, `94Pay`, begins with a number;
 
@@ -516,7 +516,6 @@ the second variable name, `my Age`, contains a space;
 and the third variable name, `lastname,firstname` , contains a special character (`,`).
 
 Here are the first few lines of a program that defines some variables:
-
 
 // My variables for the program
 
@@ -552,9 +551,8 @@ char middle_initial;
 /* Rest of program would follow. */
 ```
 
-
-If you define a variable  after the main() it's a  => Local Variable
-If you define a variable before the main() it's a  => Global Variable
+If you define a variable after the main() it's a => Local Variable
+If you define a variable before the main() it's a => Global Variable
 Local variables are almost always preferable to global variables.
 
 The assignment operator (`=`) puts values in variables.
@@ -641,42 +639,40 @@ strings has several names:
 - Binary zero
 - String terminator
 - ASCII 0
-- \0          (backslash zero)**
+- \0 (backslash zero)\*\*
 
-About the only thing you don't call the *string-terminating zero* is (zero)! 
+About the only thing you don't call the _string-terminating zero_ is (zero)!
 
 C programmers use the special names for the string-terminating zero so that you'll know that a regular
 numeric zero or a character '`0`' is not being used at the end of the string; only the
-special (*null zero*) appears at the end of a string.
+special (_null zero_) appears at the end of a string.
 
 You'll never see the null zero, but it is there. In memory, C knows when it gets to the end of a string
 only when it finds the null zero.
 
-C puts the *null zero* at the end of strings. Even the string "I am 20" ends in an *ASCII 0* directly after the
+C puts the _null zero_ at the end of strings. Even the string "I am 20" ends in an _ASCII 0_ directly after the
 character `0` in `20`
 
 The very first entry is labeled (null), and the ASCII number for null is (0).
-Look further down at *ASCII 48*, and you'll see a *0*.
-ASCII 48 is the character '*0*', whereas the first ASCII value is the (*null zero*).
+Look further down at _ASCII 48_, and you'll see a _0_.
+ASCII 48 is the character '_0_', whereas the first ASCII value is the (_null zero_).
 
 String "Crazy" is stored in memory:
 (a byte is a single memory location)
-It takes *6 bytes* to store the string.
+It takes _6 bytes_ to store the string.
 
-| 1    | 2    | 3    | 4    | 5    | 6                           |
-| ---- | ---- | ---- | ---- | ---- | --------------------------- |
-| `c`  | `r`  | `a`  | `z`  | `y`  | *0*  => *String Terminator* |
-
- 
+| 1   | 2   | 3   | 4   | 5   | 6                          |
+| --- | --- | --- | --- | --- | -------------------------- |
+| `c` | `r` | `a` | `z` | `y` | _0_ => _String Terminator_ |
 
 ### The Length of Strings
 
-The length of a string is always the number of characters up to, but not including, the *null zero*.
-Sometimes you will need to find the length of a string. 
+The length of a string is always the number of characters up to, but not including, the _null zero_.
+Sometimes you will need to find the length of a string.
 
-The null zero is never counted when determining the length of a string. 
+The null zero is never counted when determining the length of a string.
 
-Even though the *null zero* must terminate the string (so that C knows where the string ends), 
+Even though the _null zero_ must terminate the string (so that C knows where the string ends),
 the null zero is not part of the string length.
 
 Given the definition of the string length, the following strings all have lengths of nine characters:
@@ -685,11 +681,11 @@ Wednesday
 August 10
 I am here
 
-| 1    | 2    | 3    | 4    | 5    | 6    | 7    | 8    | 9    |
-| ---- | ---- | ---- | ---- | ---- | ---- | ---- | ---- | ---- |
-| W    | e    | d    | n    | e    | s    | d    | a    | y    |
-| A    | u    | g    | u    | s    | t    |      | 1    | 0    |
-| I    |      | a    | m    |      | h    | e    | r    | e    |
+| 1   | 2   | 3   | 4   | 5   | 6   | 7   | 8   | 9   |
+| --- | --- | --- | --- | --- | --- | --- | --- | --- |
+| W   | e   | d   | n   | e   | s   | d   | a   | y   |
+| A   | u   | g   | u   | s   | t   |     | 1   | 0   |
+| I   |     | a   | m   |     | h   | e   | r   | e   |
 
 - single characters have length of 1 'A'
 
@@ -699,9 +695,9 @@ I am here
 
 - literal enclosed in quotation marks have the length of 2 "A"
 
-| 1    | 2    |
-| ---- | ---- |
-| A    | *0*  |
+| 1   | 2   |
+| --- | --- |
+| A   | _0_ |
 
 ## Character Arrays: Lists of Characters
 
@@ -709,9 +705,9 @@ I am here
 
 (Character arrays) hold strings in memory.
 
-An array is a special type of variable that you'll hear much more about in upcoming chapters. 
+An array is a special type of variable that you'll hear much more about in upcoming chapters.
 
-All the data types—`int`, `float`, `char`, and the rest—have corresponding array types. 
+All the data types—`int`, `float`, `char`, and the rest—have corresponding array types.
 
 An array is nothing more than a list of variables of the same data type.
 If you needed a place to hold month names, you could define a character array called month like this:
@@ -720,12 +716,12 @@ If you needed a place to hold month names, you could define a character array ca
 char thisMonth[10]; // Defines a character array
 ```
 
-The reason 10 was used when defining the array is that the longest month name, September, 
+The reason 10 was used when defining the array is that the longest month name, September,
 has nine characters.
 
 The tenth character is for, you guessed it, the null zero.
 
-You always have to reserve enough character array space to hold the longest string you will need to hold, plus the string terminator. 
+You always have to reserve enough character array space to hold the longest string you will need to hold, plus the string terminator.
 
 You can define more array characters than needed, but not fewer than you need.
 If you want, you can store a string value in the array at the same time you define the array:
@@ -735,18 +731,18 @@ char lastMonth[10] = "January"; // Defines a character array
 ```
 
 Because nothing was put in the last two places of the
-array (January takes only seven characters plus an eighth place for the null zero), 
-you don't know what's in the last two places. 
+array (January takes only seven characters plus an eighth place for the null zero),
+you don't know what's in the last two places.
 
 (Some compilers, however, fill the unused elements with zeroes to kind of empty the rest of the string.)
 
-| 00   |      | 01   |      | 02   |      | 03   |      | 04   |      | 05   |      | 06   |      | 07   |      | 08   |      | 09   |
-| ---- | ---- | ---- | ---- | ---- | ---- | ---- | ---- | ---- | ---- | ---- | ---- | ---- | ---- | ---- | ---- | ---- | ---- | ---- |
-| J    |      | a    |      | n    |      | u    |      | a    |      | r    |      | y    |      | *\0* |      | ?    |      | ?    |
+| 00  |     | 01  |     | 02  |     | 03  |     | 04  |     | 05  |     | 06  |     | 07   |     | 08  |     | 09  |
+| --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | ---- | --- | --- | --- | --- |
+| J   |     | a   |     | n   |     | u   |     | a   |     | r   |     | y   |     | _\0_ |     | ?   |     | ?   |
 
-Each individual piece of an array is called an element. The month array has 10 elements. 
+Each individual piece of an array is called an element. The month array has 10 elements.
 
-You can distinguish between them with subscripts. 
+You can distinguish between them with subscripts.
 
 Subscripts are numbers that you specify inside brackets that refer to each of the array elements.
 
@@ -754,14 +750,14 @@ All array subscripts begin with `[0]` .
 
 The first element in the month array is called **month[0]**.
 
-The last is called **month[9]** because there are 10 elements altogether, and when you begin at `0`, 
+The last is called **month[9]** because there are 10 elements altogether, and when you begin at `0`,
 the last is 9.
 
 If you wanted to, you could change the contents of the array from January to March one element at a time, like this:
 
 | lastMonth[0] | lastMonth[1] | lastMonth[2] | lastMonth[3] | lastMonth[4] | lastMonth[5] |
 | :----------- | :----------- | ------------ | ------------ | ------------ | ------------ |
-| 'M'          | 'a'          | 'r'          | 'c'          | 'h'          | *\0*         |
+| 'M'          | 'a'          | 'r'          | 'c'          | 'h'          | _\0_         |
 
 lastMonth[0] = 'M';
 lastMonth[1] = 'a';
@@ -770,13 +766,15 @@ lastMonth[3] = 'c';
 lastMonth[4] = 'h';
 lastMonth[5] = '\0'; //You must add this
 
-It is vital that you insert the null zero at the end of the string. 
+It is vital that you insert the null zero at the end of the string.
 
 If you don't, the month array would still have a null zero three places later at Month[7];
 
 when you attempted to print the string, you would get this:
 
-**Marchry**
+```text
+Marchry
+```
 
 ```c
 //  Printing strings in arrays is easy. You use the %s conversion character:
@@ -804,16 +802,16 @@ However, unlike with regular nonarray variables, you can't assign a new string t
 month = "April"; // NOT allowed
 ```
 
-You can assign a string to a month with the equals sign only at the time you define the string. 
+You can assign a string to a month with the equals sign only at the time you define the string.
 
-If later in the program you want to put a new string into the array, 
+If later in the program you want to put a new string into the array,
 you must either assign it one character at a time or use C's **strcpy()** (string copy) function that comes with your C compiler.
 
-Don't worry: **strcpy()** automatically adds a *null zero* to the end of the string it creates.
+Don't worry: **strcpy()** automatically adds a _null zero_ to the end of the string it creates.
 
-There are three ways to place a string in a character array: 
+There are three ways to place a string in a character array:
 
-You can initialize it at the time you define the array, 
+You can initialize it at the time you define the array,
 you can assign one element at a time, or you can use the **strcpy()** function.
 
 The following statement assigns a new string to the month:
@@ -822,8 +820,6 @@ The following statement assigns a new string to the month:
 strcpy(preMonth, "April"); // Puts new string in month array
 // In your programs that use strcpy(), you must put this line after the #include <stdio.h>
 ```
-
-
 
 ```c
 // Example program #1 from Chapter 6 of
@@ -860,9 +856,9 @@ main() {
 }
 ```
 
-Two types of lines you see in many C programs are not C commands at all. 
+Two types of lines you see in many C programs are not C commands at all.
 
-They are preprocessor directives. A preprocessor directive always begins with a pound sign (`#`). Preprocessor directives don't cause anything to happen at runtime (when you run your program). 
+They are preprocessor directives. A preprocessor directive always begins with a pound sign (`#`). Preprocessor directives don't cause anything to happen at runtime (when you run your program).
 
 Instead, they work during the compiling of your program.
 
@@ -872,12 +868,13 @@ These preprocessor directives are used most often:
 
 ## Including Files
 
-#include inserts a disk file into the middle of another file.
+## include inserts a disk file into the middle of another file
+
 When you've used a word processor, you might have used an #include type of
 command if you merged a file stored on disk into the middle of the file you were editing.
 
- When you install your compiler, the installation program sets up a separate location on your disk (in a
-directory) for various `#include` files that come with your compiler. 
+When you install your compiler, the installation program sets up a separate location on your disk (in a
+directory) for various `#include` files that come with your compiler.
 
 When you want to use one of these built-in `#include` files, use the #include format with the angled brackets, `<` and `>`.
 
@@ -886,17 +883,17 @@ When you want to use one of these built-in `#include` files, use the #include fo
 and
 `#include "filename"`
 
-It's nothing more than a file merge command. 
+It's nothing more than a file merge command.
 
-Right before your program is compiled, the #include statement is replaced with the contents of the filename specified after `#include`. 
+Right before your program is compiled, the #include statement is replaced with the contents of the filename specified after `#include`.
 
-The filename can be stated in either uppercase or lowercase letters, 
-as long as your operating system allows for either in filenames. 
+The filename can be stated in either uppercase or lowercase letters,
+as long as your operating system allows for either in filenames.
 
-For example, my *Windows XP* implementation of Code :
+For example, my _Windows XP_ implementation of Code :
 
 Blocks does not distinguish between uppercase and lowercase letters in
-filenames, but *UNIX* does. If your file is named *myFile.txt*, you might be able to use any of the
+filenames, but _UNIX_ does. If your file is named _myFile.txt_, you might be able to use any of the
 following `#include` directives:
 
 `#include "MYFILE.TXT"`
@@ -909,35 +906,35 @@ However, UNIX allows only this:
 You've already used two built-in functions in your programs: `printf()` and `strcpy()`.
 
 (`main()` is not a built-in C function; it is a function you must supply.) As a reminder, the
-`#include` file for `printf()` is *stdio.h* (which stands for *standard I/O*), and the `#include`
-file for the `strcpy()` function is *string.h*.
+`#include` file for `printf()` is _stdio.h_ (which stands for _standard I/O_), and the `#include`
+file for the `strcpy()` function is _string.h_.
 
-When you install your compiler, the installation program sets up a separate location on your disk 
-(in a directory) for various `#include` files that come with your compiler. 
+When you install your compiler, the installation program sets up a separate location on your disk
+(in a directory) for various `#include` files that come with your compiler.
 
-When you want to use one of these built-in `#include` files, 
+When you want to use one of these built-in `#include` files,
 use the `#include` format with the angled brackets, `<` and `>`.
 
 You might write your own header files when you have program statements that you frequently use in
-many programs. 
+many programs.
 
 Instead of typing them in every program, you can put them in a file in your program
 directory and use the `#include` directive with the file where you want to use the statements.
 
 When you write your own header files, use the second form of the preprocessor directive, the one that
-has quotation marks. 
+has quotation marks.
 
 When you use quotation marks, C first searches the disk directory in which your
-program is stored and then searches the built-in `#include` directory. 
+program is stored and then searches the built-in `#include` directory.
 
 Because of the search order,
-you can write your own header files and give them the same name as those built into C, 
+you can write your own header files and give them the same name as those built into C,
 and yours will be used instead of C's
 
 If you write your own header files, don't put them with C's built-in `#include` file
-directory. 
+directory.
 
-Leave C's supplied header files intact. There is rarely a reason to override C's headers, 
+Leave C's supplied header files intact. There is rarely a reason to override C's headers,
 but you might want to add some headers of your own.
 
 ### Placing `#include` Directives
@@ -951,22 +948,22 @@ The header files you write often contain code that you want to place in more tha
 
 ### Defining Constants
 
-The `#define` preprocessor directive defines constants. 
+The `#define` preprocessor directive defines constants.
 
 A C constant is really the same thing as a literal.
 
 A literal is a data value that doesn't change, like the number 4 or the string "C programming".
 
-The `#define` preprocessor directive lets you give names to literals. 
+The `#define` preprocessor directive lets you give names to literals.
 
 When you give a name to a literal,
 the named literal is known in C terminology as a named constant or a defined constant.
 
-Use uppercase letters for the defined constant name. 
+Use uppercase letters for the defined constant name.
 
-This is the one exception in C when *uppercase* is not only used, but recommended. 
+This is the one exception in C when _uppercase_ is not only used, but recommended.
 
-Because defined constants are not variables, 
+Because defined constants are not variables,
 the uppercase lets you glance through a program and tell at a glance what is a variable and what is a constant.
 
 As long as you keep defined constant names in upper case, you will know not to change them because
@@ -1049,11 +1046,11 @@ main() {
 
 `printf()` sends data to the screen.
 `scanf()` function gets data from the keyboard.
-`scanf()` is a built-in C function that comes with all C compilers. 
+`scanf()` is a built-in C function that comes with all C compilers.
 
-Its header file is the same as `printf()` 
+Its header file is the same as `printf()`
 
-by `#include <stdio.h>`,  you don't have to worry about including an additional header file for `scanf()`.
+by `#include <stdio.h>`, you don't have to worry about including an additional header file for `scanf()`.
 
 `scanf()` fills variables with values typed by the user.
 
@@ -1067,7 +1064,7 @@ The variables
 listed inside `scanf()` (following the controlString) will accept whatever values the user
 types. `scanf()` quits when the user presses Enter after typing values.
 
-Even though `scanf()` uses the same conversion characters as `printf()`, 
+Even though `scanf()` uses the same conversion characters as `printf()`,
 never specify escape sequences such as `\n`, `\a`, or `\t`.
 
 Escape sequences confuse `scanf()`.
@@ -1075,12 +1072,12 @@ Escape sequences confuse `scanf()`.
 
 ### Prompting for `scanf()`
 
-Almost every `scanf()` you write should be preceded with `printf()`. 
+Almost every `scanf()` you write should be preceded with `printf()`.
 
-If you don't start with a`printf()`, 
+If you don't start with a`printf()`,
 the program stops and waits for input, and the user has no idea what to do.
 
-Generally, the `printf()` requests the data from the user, 
+Generally, the `printf()` requests the data from the user,
 and the `scanf()` gets the data that the user types.
 
 A `printf()` before a `scanf()` sends a prompt to the user.
@@ -1102,31 +1099,31 @@ even though the ampersand is not part of the variable name!
 
 An exception to the ampersand rule does exist:
 
-If you're getting input into an array using `%s`, 
-as happens when you ask users for a name to be stored in a character array, 
+If you're getting input into an array using `%s`,
+as happens when you ask users for a name to be stored in a character array,
 you do not use the ampersand.
 
-Do it, and `scanf()` works; leave off the ampersand, 
+Do it, and `scanf()` works; leave off the ampersand,
 and `scanf()` won't accept the user's values into the variables.
 
 If you're asking the user to type integers, floating points, characters,
 doubles, or any of the other single-variable combinations (long integers and so on), put an ampersand
-before the variable names in the `scanf()`. 
+before the variable names in the `scanf()`.
 
-If you are asking the user for a string to input into a character array, 
+If you are asking the user for a string to input into a character array,
 don't put the ampersand before the array name.
 
 There's a problem with using `scanf()` to get character strings into character arrays that you need to
-know about now. 
+know about now.
 
-`scanf()` stops reading string input at the first space. 
-Therefore, you can get only a single word at a time with `scanf()`. 
+`scanf()` stops reading string input at the first space.
+Therefore, you can get only a single word at a time with `scanf()`.
 
-If you must ask the user for more than one word, such as the user's first and last name, 
-use two `scanf()` statements (with their own `printf()` prompts) 
+If you must ask the user for more than one word, such as the user's first and last name,
+use two `scanf()` statements (with their own `printf()` prompts)
 and store the two names in two character arrays.
 
-You also wouldn't put the ampersand in front of pointer variables. Actually, 
+You also wouldn't put the ampersand in front of pointer variables. Actually,
 an array is nothing more than a pointer variable, and that's why the ampersand isn't needed for arrays.
 
 ```c
@@ -1158,20 +1155,20 @@ main()
 }
 ```
 
-The spaces right before each ` %c` or `%d`:
-The space isn't always required here, but it never hurts, 
-and it sometimes helps the input work better when you get numbers and characters in succession. 
+The spaces right before each `%c` or `%d`:
+The space isn't always required here, but it never hurts,
+and it sometimes helps the input work better when you get numbers and characters in succession.
 Adding the extra space is a good habit to get into now while learning `scanf()`.
 
 Make your leading `printf()` statement as descriptive as possible.
-If you ask for only a favorite number, a user might enter a decimal instead of just a whole number. 
+If you ask for only a favorite number, a user might enter a decimal instead of just a whole number.
 Who knows—maybe someone's favorite number is `3.14159`.
 
-`scanf()` is not the easiest function to use. 
+`scanf()` is not the easiest function to use.
 
-One of the first problems with `scanf()` is that although the user must type exactly what `scanf()` expects, the user rarely does this. 
+One of the first problems with `scanf()` is that although the user must type exactly what `scanf()` expects, the user rarely does this.
 
-If the `scanf()` needs a floating-point value, but the user types a character, there is little you can do. 
+If the `scanf()` needs a floating-point value, but the user types a character, there is little you can do.
 
 The floating-point variable you supply will have bad data because a character is not a floating-point value.
 
@@ -1218,7 +1215,7 @@ main()
 ### Crunching the Numbers—Letting C Handle Math for You
 
 C doesn't always calculate from left to right.
-`expression =  one or more operators`
+`expression = one or more operators`
 
 C programmers often use math expressions on the right side of the assignment operator
 when filling variables with values, like this:
@@ -1233,9 +1230,9 @@ If you want to subtract a negative value, be sure to put a space between the min
 newValue = oldValue - -factor;
 ```
 
-If you omit the space, C thinks you're using another operator, `--`, 
+If you omit the space, C thinks you're using another operator, `--`,
 
-called *the decrement operator*
+called _the decrement operator_
 
 You can't use `%` between anything but integer data types.
 
@@ -1249,7 +1246,7 @@ You can even put a math expression inside a printf():
 printf("In 3 years, I'll be %d years old.\n", age + 3);
 ```
 
-This program asks the user for a number of tires and price per tire. 
+This program asks the user for a number of tires and price per tire.
 It then calculates a total price, adding sales tax.
 
 If you find you use a sales tax rate that may change, use `#define`
@@ -1304,11 +1301,11 @@ lists the complete order of operators.
 | 2          | + -          | Unary plus and minus                              | Right-to-left |
 | 2          | ! ~          | Logical NOT and bitwise NOT                       | Right-to-left |
 | 2          | (type)       | Cast                                              | Right-to-left |
-| 2          | *            | Indirection (dereference)                         | Right-to-left |
+| 2          | \*           | Indirection (dereference)                         | Right-to-left |
 | 2          | &            | Address-of                                        | Right-to-left |
 | 2          | sizeof       | Size-of[note 2]                                   | Right-to-left |
-| 2          | _Alignof     | Alignment requirement(C11)                        | Right-to-left |
-| 3          | * / %        | Multiplication, division, and remainder           | Left-to-right |
+| 2          | \_Alignof    | Alignment requirement(C11)                        | Right-to-left |
+| 3          | \* / %       | Multiplication, division, and remainder           | Left-to-right |
 | 4          | + -          | Addition and subtraction                          | Left-to-right |
 | 5          | << >>        | Bitwise left shift and right shift                | Left-to-right |
 | 6          | < <=         | For relational operators < and ≤ respectively     | Left-to-right |
@@ -1322,7 +1319,7 @@ lists the complete order of operators.
 | 13         | ?:           | Ternary conditional[note 3]                       | Right-to-left |
 | 14[note 4] | =            | Simple assignment                                 | Right-to-left |
 | 14[note 4] | += -=        | Assignment by sum and difference                  | Right-to-left |
-| 14[note 4] | *= /= %=     | Assignment by product, quotient, and remainder    | Right-to-left |
+| 14[note 4] | \*= /= %=    | Assignment by product, quotient, and remainder    | Right-to-left |
 | 14[note 4] | <<= >>=      | Assignment by bitwise left shift and right shift  | Right-to-left |
 | 14[note 4] | &= ^= \|=    | Assignment by bitwise AND, XOR, and OR            | Right-to-left |
 | 15         | ,            | Comma                                             | Left-to-right |
@@ -1338,14 +1335,14 @@ lists the complete order of operators.
 
 4. Assignment operators' left operands must be unary (level-2 non-cast) expressions. This rule grammatically
    forbids some expressions that would be semantically invalid anyway. Many compilers ignore this rule and detect
-    the invalidity semantically. For example, `e = a < d ? a++ : a = d` is an expression that cannot be parsed because
-    of this rule. However, many compilers ignore this rule and parse it as 
+   the invalidity semantically. For example, `e = a < d ? a++ : a = d` is an expression that cannot be parsed because
+   of this rule. However, many compilers ignore this rule and parse it as
 
- `e = ( ((a < d) ? (a++) : a) = d )`, and then give an error because it is semantically invalid.
+`e = ( ((a < d) ? (a++) : a) = d )`, and then give an error because it is semantically invalid.
 
-If an expression such as this contains more than one operator that sits on the same level 
-in the order of operators table, you must use the third column, labeled Associativity, 
-to determine how the operators are evaluated. 
+If an expression such as this contains more than one operator that sits on the same level
+in the order of operators table, you must use the third column, labeled Associativity,
+to determine how the operators are evaluated.
 
 In other words, because `*`, `/`, and `%` all reside on the same level, they were evaluated from left to right,
 as dictated by the order of operators table's Associativity column.
@@ -1371,7 +1368,7 @@ If you want to override the order of operators, as you would do in this case,
 you have to learn to use ample parentheses around expressions to evaluates that expression before the others.
 
 Use lots of parentheses. They clarify your expressions. Even if the regular operator
-order will suffice for your expression, 
+order will suffice for your expression,
 parentheses make the expression easier for you to decipher if you need to change the program later.
 
 ```c
@@ -1395,7 +1392,6 @@ but this is easier:
 ```c
 a = b = c = d = e = f = g = h = i = j = 9;
 ```
-
 
 Because of the right-to-left associativity, C first assigns the 9 to j, then puts the 9 in i, and so on.
 
@@ -1436,17 +1432,17 @@ so a multiple assignment statement works. */
 
 ### Compound Assignment
 
-Many operators help C keep its command vocabulary small. 
+Many operators help C keep its command vocabulary small.
 
-C doesn't have many commands, 
-but it has a lot more operators than in most other programming languages; 
+C doesn't have many commands,
+but it has a lot more operators than in most other programming languages;
 whereas most computer programming
 
 languages have relatively few operators and lots of commands, C retains its succinct nature by
 providing many powerful operators.
 
 Suppose your program had to count the number of times a profit value went below zero. You would
-need to set up a counter variable. A (*counter variable*) is a variable that you add 1 to when a certain
+need to set up a counter variable. A (_counter variable_) is a variable that you add 1 to when a certain
 event takes place. Every time a profit value goes negative, you might do this:
 
 Remember that an equals sign means to take whatever is on the right of the equals sign and store that
@@ -1460,7 +1456,7 @@ lossCount = lossCount + 1; // Adds 1 to lossCount variable
 
 This program increases a counter from 1 to 5, printing updates and then counts it back down to 1.
 (in computer lingo, it's called (incrementing, decrementing, and updating by more than 1).)
-*/
+\*/
 
 ```c
 // Example program #1 from Chapter 10 of Absolute Beginner's Guide
@@ -1494,7 +1490,7 @@ main()
 }
 ```
 
-```
+```text
 Counter is at 1.
 Counter is at 2.
 Counter is at 3.
@@ -1526,7 +1522,7 @@ sales = sales * 1.25; /* Increases sales by 25 percent */
 sales *= 1.25; /* Increases sales by 25 percent */
 ```
 
-### Compound Assignment OperatorsThe +=, for instance, is several levels lower than the +.
+### Compound Assignment OperatorsThe +=, for instance, is several levels lower than the +
 
 This program also increases a counter from 1 to 5, printing updates
 and then counts it back down to 1. However, it uses compound operators
@@ -1559,7 +1555,7 @@ main()
 }
 ```
 
-```
+```text
 Counter is at 1.
 Counter is at 2.
 Counter is at 3.
@@ -1623,7 +1619,7 @@ Don't mix data types. Instead, typecast data so that it is all the same type bef
 
 ## The Fork in the Road—Testing Data to Pick a Path
 
-Relational operators compare two values. 
+Relational operators compare two values.
 
 You always put a variable, literal, or expression—
 or a combination of any two of them—on either side of a relational operator
@@ -1631,21 +1627,21 @@ or a combination of any two of them—on either side of a relational operator
 To tell the difference between `=` and `==`, remember that you need two equals signs to
 double-check whether something is equal.
 
-| Operator |                         Description                          |        Example        |
-| :------: | :----------------------------------------------------------: | :-------------------: |
-|    ==    | Checks if the values of two operands are equal or not. If yes, then the condition becomes true. | (A == B) is not true. |
-|    !=    | Checks if the values of two operands are equal or not. If the values are not equal, then the condition becomes true. |   (A != B) is true.   |
-|    >     | Checks if the value of left operand is greater than the value of right operand. If yes, then the condition becomes true. | (A > B) is not true.  |
-|    <     | Checks if the value of left operand is less than the value of right operand. If yes, then the condition becomes true. |   (A < B) is true.    |
+| Operator |                                                             Description                                                              |        Example        |
+| :------: | :----------------------------------------------------------------------------------------------------------------------------------: | :-------------------: |
+|    ==    |                   Checks if the values of two operands are equal or not. If yes, then the condition becomes true.                    | (A == B) is not true. |
+|    !=    |         Checks if the values of two operands are equal or not. If the values are not equal, then the condition becomes true.         |   (A != B) is true.   |
+|    >     |       Checks if the value of left operand is greater than the value of right operand. If yes, then the condition becomes true.       | (A > B) is not true.  |
+|    <     |        Checks if the value of left operand is less than the value of right operand. If yes, then the condition becomes true.         |   (A < B) is true.    |
 |    >=    | Checks if the value of left operand is greater than or equal to the value of right operand. If yes, then the condition becomes true. | (A >= B) is not true. |
-|    <=    | Checks if the value of left operand is less than or equal to the value of right operand. If yes, then the condition becomes true. |   (A <= B) is true.   |
+|    <=    |  Checks if the value of left operand is less than or equal to the value of right operand. If yes, then the condition becomes true.   |   (A <= B) is true.   |
 
-Only like values should go on either side of the relational operator. 
-In other words, don't compare a character to a float. 
-If you have to compare two unlike data values, 
+Only like values should go on either side of the relational operator.
+In other words, don't compare a character to a float.
+If you have to compare two unlike data values,
 use a typecast to keep the values the same data type.
 
-Every time C evaluates a relational operator, a value of 1 or 0 is produced. 
+Every time C evaluates a relational operator, a value of 1 or 0 is produced.
 
 True always results in 1, and false always results in 0.
 
@@ -1658,18 +1654,17 @@ if (condition)
 
 The parentheses around the condition are required.
 The condition is a relational test like those described in the preceding section.
-The block of one or more C statements is called the body  of the if statement.
+The block of one or more C statements is called the body of the if statement.
 The braces around the block of one or more C statements are required if the body of the if
 contains more than a single statement.
 
 Even though braces aren't required, if an (`if`) contains just one statement, always use the braces.
 If you later add statements to the body of the (`if`), the braces will be there.
-If the braces enclose more than one statement, the braces enclose what is known as a (*compound statement*).
-
+If the braces enclose more than one statement, the braces enclose what is known as a (_compound statement_).
 
 This program asks the user for their birth year and calculates
-how old they will be in the current year. 
-(it also checks to make sure a future year has not been entered.) 
+how old they will be in the current year.
+(it also checks to make sure a future year has not been entered.)
 It then tells the user if they were born in a leap year.
 
 ```c
@@ -1723,8 +1718,8 @@ else
 { block of one or more C statements; }
 ```
 
-Put semicolons only at the end of executable statements in the body of the if or the else. 
-Never put a semicolon after the if or the else; 
+Put semicolons only at the end of executable statements in the body of the if or the else.
+Never put a semicolon after the if or the else;
 semicolons go only at the end of complete statements.
 
 As with the body of the if, the body of the else doesn't require braces if it consists
@@ -1816,7 +1811,7 @@ main()
 
 ### Juggling Several Choices with Logical Operators
 
-A relational operator simply tests how two values relate 
+A relational operator simply tests how two values relate
 (how they compare to each other). The logical operators combine relational operators.
 
 Sometimes logical operators are known as compound
@@ -1826,7 +1821,7 @@ relational operators because they let you combine more than one relational opera
 | --------------------------------- | ---------- | ---------- |
 | Addition assignment               | a += b     | a = a + b  |
 | Subtraction assignment            | a -= b     | a = a - b  |
-| Multiplication assignment         | a *= b     | a = a * b  |
+| Multiplication assignment         | a \*= b    | a = a\* b  |
 | Division assignment               | a /= b     | a = a / b  |
 | Modulo assignment                 | a %= b     | a = a % b  |
 | Bitwise AND assignment            | a &= b     |            |
@@ -1838,7 +1833,7 @@ relational operators because they let you combine more than one relational opera
 | Bitwise left shift assignment     | a <<= b    | a = a << b |
 | Bitwise right shift assignment[e] | a >>= b    | a = a >> b |
 
-Logical operators appear between two or more relational tests. 
+Logical operators appear between two or more relational tests.
 For example, here are the first parts of three if statements that use logical operators:
 
 ```c
@@ -1850,14 +1845,14 @@ if (!(isCharterMember)) { }
 ```
 
 If you combine two relational operators with a logical operator or you use the ! (not) operator to
-negate a relation, the entire expression following the if statement requires parentheses. 
+negate a relation, the entire expression following the if statement requires parentheses.
 This is not allowed:
 
 ```c
 if !isCharterMember { // Not allowed }
 ```
 
-Of course, there is more to the preceding if statements than what is shown, 
+Of course, there is more to the preceding if statements than what is shown,
 but to keep things simple at this point, the if bodies aren't shown.
 
 Logical operators work just as they do in spoken language. For example, consider the spoken
@@ -1963,7 +1958,7 @@ main()
 }
 ```
 
-```
+```text
 The cast of Friends and the Beatles could make a baseball team,
 AND the cast of Friends plus the Avengers could make a football team.
 
@@ -2038,7 +2033,7 @@ printf("*** Turn the printer on now. ***\n");
 }
 } else {
 printf("You did not enter a Y or N.\n");
-  
+
 }
 ```
 
@@ -2046,12 +2041,11 @@ You can combine more than two relational operators with logical operators, but d
 too much in a single statement can cause confusion. This is a little too much:
 
 Try to keep your combined relational tests simple so that your programs remain easy to
- read and maintain.
+read and maintain.
 
 ```c
 if ((a < 6) || (c >= 3) && (r != 9) || (p <= 1)) {}
 ```
-
 
 Studying the order of operators shows you that the `&&` operator has precedence
 over the `||`.
@@ -2069,12 +2063,12 @@ like this:
 if ((age < 20) || ((sales < 1200) && (hrsWorked > 15))) {}
 ```
 
-Use ample parentheses. Parentheses help clarify the order of operators. 
+Use ample parentheses. Parentheses help clarify the order of operators.
 
-C won't get confused if you don't use parentheses because it knows the order of operators table very well. 
+C won't get confused if you don't use parentheses because it knows the order of operators table very well.
 
 However, a person looking at your program has to figure out which is done first, and parentheses help group operations
-    together.
+together.
 
 ```c
 if (grade > 93 && classMissed <= 3 && numActs >= 3 || sports >= 2) {}
@@ -2091,27 +2085,27 @@ if ((grade > 93) && (classMissed <= 3)) {
 }
 ```
 
-​    • Use logical operators to connect relational operators.
-​    • Use && when both sides of the operator have to be true for the entire condition to be
-​    true.
-​    • Use || when either one side or the other side (or both) have to be true for the entire
-​    condition to be true.
-​    • Don't overdo the use of !. Most negative logic can be reversed (so < becomes >=
-​    and > becomes <=) to get rid of the not operator.
-​    • Don't combine too many relational operators in a single expression.
+​ • Use logical operators to connect relational operators.
+​ • Use && when both sides of the operator have to be true for the entire condition to be
+​ true.
+​ • Use || when either one side or the other side (or both) have to be true for the entire
+​ condition to be true.
+​ • Don't overdo the use of !. Most negative logic can be reversed (so < becomes >=
+​ and > becomes <=) to get rid of the not operator.
+​ • Don't combine too many relational operators in a single expression.
 
 ## A Bigger Bag of Tricks—Some More Operators for Your Programs
 
-C operators sometimes substitute for more wordy commands that you would use in other programming languages. 
+C operators sometimes substitute for more wordy commands that you would use in other programming languages.
 
 Not only can an assortment of operators speed your program development time, but they
-also compile more efficiently and run faster than commands. 
+also compile more efficiently and run faster than commands.
 
 The C operators do a lot to make C the efficient language that it is.
 
 The conditional operator is the only C operator that requires three arguments.
 
-Whereas division, multiplication, and most of the others require two values to work, the conditional operator requires three. 
+Whereas division, multiplication, and most of the others require two values to work, the conditional operator requires three.
 
 Although the format of the conditional operator looks complex, you will see that it streamlines
 some logic and is actually straightforward to use.
@@ -2119,11 +2113,11 @@ some logic and is actually straightforward to use.
 The conditional operator looks like this:
 ?:. Here is its format:
 
-```
+```text
 relation ? trueStatement : falseStatement;
 ```
 
-The relation is any relational test, such as age >= 21 or sales <= 25000.0. 
+The relation is any relational test, such as age >= 21 or sales <= 25000.0.
 
 You also can combine the relational operators with the logical operators.
 The trueStatement is any valid C statement, and the falseStatement is also any valid C statement.
@@ -2160,15 +2154,15 @@ face such a situation, take the assignment out of the conditional operator's sta
 total *= (total <= 3850.0) ? (1.10) : (1.05);
 ```
 
-Maybe you're wondering why the conditional operator is ? : , 
-but the question mark and colon never appear next to each other. 
-Well, that's just the way it is. 
+Maybe you're wondering why the conditional operator is ? : ,
+but the question mark and colon never appear next to each other.
+Well, that's just the way it is.
 
 It would be too cumbersome to go around saying that the conditional operator looks like a question mark and a colon with some stuff in between
 
-Don't replace every single if...else with a conditional operator. 
+Don't replace every single if...else with a conditional operator.
 
-Many times, if...else is more readable, and some conditional statements are just too complex to squeeze easily into a conditional operator. 
+Many times, if...else is more readable, and some conditional statements are just too complex to squeeze easily into a conditional operator.
 
 However, when a simple if...else is all that's needed, the conditional operator provides a nice alternative.
 
@@ -2262,7 +2256,7 @@ return 0;
 }
 ```
 
-```
+```text
 Counter is at 1.
 Counter is at 2.
 Counter is at 3.
@@ -2287,13 +2281,13 @@ This program asks for a number from 1 to 100 and tells then
 whether or not their choice is equally divisible by 2 through 9.
 
 Although the `printf()` statement asks for the number to be between `1` and `100`, users
-actually can enter any integer. 
+actually can enter any integer.
 
 If you use `362880`, you'll find that it is divisible by all eight single-digit integers.
 
 ### The Small-Change Operators: ++ and
 
-Although the conditional operator works on three arguments, the increment and decrement operators work on only one. 
+Although the conditional operator works on three arguments, the increment and decrement operators work on only one.
 
 The increment operator adds 1 to a variable, and the decrement operator subtracts 1 from a variable.
 
@@ -2351,12 +2345,12 @@ The following statement increments i after multiplying `i` by `j` and storing th
 //    int i = 2, j = 5, n;
 n = ++i * j;
 printf(" n = i++ * j\n");               //   n = i++ * j
-printf("%d =  %d    %d\n", n, i, j);    //  15 =  3    5 
+printf("%d =  %d    %d\n", n, i, j);    //  15 =  3    5
 // C computes i after everything else on the line finishes.
 ```
 
-The `++` and `--` operators are extremely efficient. If you care about such things 
-(most of us don't), `++` and -- compile into only one machine language statement, 
+The `++` and `--` operators are extremely efficient. If you care about such things
+(most of us don't), `++` and -- compile into only one machine language statement,
 whereas adding or subtracting `1` using `+1` or `-1` doesn't always compile so efficiently.
 
 ### Sizing Up the Situation
@@ -2381,7 +2375,7 @@ printf("The size of i is %d.\n", sizeof(i));
 printf("The size of name is %d.\n", sizeof(name));
 ```
 
-```
+```text
 The size of i is 4
 The size of name is 12
 ```
@@ -2397,12 +2391,12 @@ Although `sizeof()` might seem worthless right now, you'll see how it comes in h
 
 ## Part III: Fleshing Out Your Programs
 
-### Code Repeat—Using Loops to Save Time and Effort 
+### Code Repeat—Using Loops to Save Time and Effort
 
 A loop is simply a section of code that repeats a few times.
 You don't want a loop to repeat forever-that's called an infinite loop.
 
-If you want to add a list of figures, print company sales totals for the past 12 months, 
+If you want to add a list of figures, print company sales totals for the past 12 months,
 or add up the number of students who enroll in a computer class, you need to use a loop.
 
 ### While We Repeat
@@ -2462,7 +2456,7 @@ main()
 }
 ```
 
-```
+```text
 Counter is at 1.
 Counter is at 2.
 Counter is at 3.
@@ -2474,16 +2468,15 @@ Counter is at 2.
 Counter is at 1.
 ```
 
-###  Using do...while
+### Using do...while
 
 The (do...while) behaves almost exactly like the while loop. Here is the format of do...while:
 
-```
+```text
 do
 { block of one or more C statements; }
 while (condition)
 ```
-
 
 The do and while act like wrappers around the body of the loop. Again, braces are
 required if the body has more than a single statement.
@@ -2610,8 +2603,6 @@ for (i=1; i <= employees; i++;)
 // Calculations for each employee follow...
 ```
 
-
-
 ```c
 for (cDown = 10; cDown >0; cDown--)
 {
@@ -2620,7 +2611,7 @@ printf("%d.\n", cDown);
 printf("Blast off!\n");
 ```
 
-```
+```text
 10
 9
 8
@@ -2634,8 +2625,6 @@ printf("Blast off!\n");
 Blast off!
 ```
 
-
-
 ```c
 for (outer = 1; outer <= 3; outer++)
 { // If you put a for loop in the body of another loop, you are nesting the loops.
@@ -2647,7 +2636,7 @@ printf("%d ", inner)
 printf("\n");
 ```
 
-```
+```text
 1 2 3 4 5
 1 2 3 4 5
 1 2 3 4 5
@@ -2656,14 +2645,14 @@ printf("\n");
 ### Movies
 
 Here's a full program that executes a for loop based on the number of movies a user has claimed to
-see in the current year. 
+see in the current year.
 
-It asks for the name of the movie and a rating on a scale of 1 to 10. 
+It asks for the name of the movie and a rating on a scale of 1 to 10.
 
 It then tells the user what movie was ranked as a favorite and what movie was the least favorite:
 
-This program will ask users how many movies they've seen this year, 
-and then loop through asking the name of each movie and a rating from 1 to 10. 
+This program will ask users how many movies they've seen this year,
+and then loop through asking the name of each movie and a rating from 1 to 10.
 It will remember their favorite movie and their least favorite movie.
 
 ```c
@@ -2727,7 +2716,7 @@ n\n");
 }
 ```
 
-```
+```text
 How many movies have you seen this year? 5
 What was the name of the movie? (1-word titles only!) Veranda
 On a scale of 1 to 10, what would you rate it? 7
@@ -2777,7 +2766,7 @@ break;
 
 As a real-world example, suppose a teacher wrote a program to average the 25 students' test scores.
 The following program keeps a running total of the 25 students. However, if a student or two missed
-the test, the teacher wouldn't want to average the entire 25 student scores. 
+the test, the teacher wouldn't want to average the entire 25 student scores.
 
 If the teacher enters a - 1.0 for a test score, the -1.0 triggers the break statement and the loop terminates early.
 
@@ -2812,7 +2801,7 @@ main()
 }
 ```
 
-```
+```text
 What is the next student's test score? 89.9
 What is the next student's test score? 92.5
 What is the next student's test score? 51.0
@@ -2877,7 +2866,7 @@ main()
 }
 ```
 
-```
+```text
 I'm rather odd...
 Even up!
 I'm rather odd...
@@ -2911,7 +2900,6 @@ What do you want to do?
 6. Quit the Program
    What is your choice?
 
-
 When you create menus that ask for user input, you are creating a user interface.
 
 The switch statement has one of the longest formats of any statement in C (or just about any other language).
@@ -2927,8 +2915,6 @@ case (expression3): { one or more C statements; }
 // This would keep going for however many case statements to test
 default: { one or more C statements; }
 ```
-
-
 
 ```c
 // Example program #1 from Chapter 17 of Absolute Beginner's Guide
@@ -2984,7 +2970,7 @@ main()
 exit() function. The value you place in the exit() parentheses is returned to your
 operating system. Most beginning programmers ignore the return value and put either a 0 or a 1 in the parentheses. You must remember to add <stdlib.h> with the
 #include directive in every program that uses exit(). */
-            // Even default doesn't have to be the last case statement.                 
+            // Even default doesn't have to be the last case statement.
             default: printf("\n%d is not a valid choice.\n", choice);
                 printf("Try again.\n");
                 break;
@@ -3002,7 +2988,7 @@ default works like else, in a way. else takes care of an action if an if test is
 default takes care of an action if none of the other case conditions successfully matches the
 switch variable. Although default is optional (as is else), it's good programming practice to
 use a default to handle unexpected switch values.
-*/                             
+*/
         }
     } while ((choice < 1) || (choice > 5));
     return 0;
@@ -3266,14 +3252,14 @@ This program is nothing more than a simple demonstration of the `putchar()` func
 
 `putchar()` is defined in stdio.h, but string.h is needed for the `strlen()` function
 
-## Increasing Your Program's Output (and Input)
+## Increasing Your Program's Output (and Input)2
 
 Here is a program that gets one character at a time from the keyboard and stores the collected
 characters in a character array. A series of putchar() functions then prints the array backward.
 
 This program is nothing more than a simple demonstration of the getchar() function.
 
-// `getchar()` is defined in *stdio.h*, but *string.h* is needed for the `strlen()` function
+// `getchar()` is defined in _stdio.h_, but _string.h_ is needed for the `strlen()` function
 
 ```c
 // Example program #1 from Chapter 18 of Absolute Beginner's Guide
@@ -3297,8 +3283,6 @@ main()
     return(0);
 }
 ```
-
-
 
 ```c
 // Example program #2 from Chapter 18 of Absolute Beginner's Guide
@@ -3606,7 +3590,7 @@ strcat(first, last); //Adds last to the end of first
 printf("I am $s\n", first);
 ```
 
-```
+```text
 I am Katniss Everdeen
 ```
 
@@ -3679,7 +3663,7 @@ main()
 }
 ```
 
-```
+```text
 What town do you live in?
 Gas City
 What state do you live in? (2-letter abbreviation)
@@ -3704,7 +3688,7 @@ math.h along with stdio.h if you use a math function. The first few math functio
 much math functions as they are numeric functions. These functions convert numbers to and from other numbers.
 
 The `floor()` and `ceil()` functions are called the floor and ceiling functions, respectively.
-They *“push down”* and *“push up”* non-integers to their next-lower or next-higher integer values.
+They _“push down”_ and _“push up”_ non-integers to their next-lower or next-higher integer values.
 For example, if you wanted to compute how many dollar bills were in a certain amount of change
 (that includes dollars and cents), you could use `floor()` on the amount.
 The following code does just that:
@@ -3759,7 +3743,7 @@ printf("10 raised to the third power is %.0f.\n", pow(10.0, 3.0));  // =>  10.0 
 printf("The square root of 64 is %.0f.\n", sqrt(64));               // √64
 ```
 
-```
+```text
 10 raised to the 3rd power is 1000.
 The square root of 64 is 8.
 ```
@@ -3786,10 +3770,10 @@ with this formula:
 radians = degrees * (3.14159 / 180.0);
 ```
 
-| The primary log functions. |                                                              |
-| -------------------------- | ------------------------------------------------------------ |
-| e^p(x)                     | Return e, the base of the natural algorithm, raised to a power specified by x(e^x) |
-| log(x)                     | Return the natural algorithm of the argument x, mathematically written as ln(x) must be positive. |
+| The primary log functions. |                                                                                                      |
+| -------------------------- | ---------------------------------------------------------------------------------------------------- |
+| e^p(x)                     | Return e, the base of the natural algorithm, raised to a power specified by x(e^x)                   |
+| log(x)                     | Return the natural algorithm of the argument x, mathematically written as ln(x) must be positive.    |
 | log10(x)                   | Return the Base 10 logarithm of the argument x, mathematically written as log10(x) must be positive. |
 
 ```c
@@ -3834,7 +3818,7 @@ main()
 }
 ```
 
-```
+```text
 It's time to do your math homework!
 Section 1: Square Roots
 The square root of 49.0 is 7.0
@@ -4004,21 +3988,21 @@ int f; // Defines a non-array variable
 
 To define an array, you must add brackets ([]) after the name and specify the maximum number of
 elements you will ever store in the array:
-*/*
+_/_
 
 ```c
 int o[25]; // Defines the array
 ```
 
-/*
+/_
 If you want to initialize a character array with an initial string, you know that you can do this:
-*/*
+_/\*
 
 ```c
 char name6[6] = "Italy"; // Leave room for the null!
 ```
 
-/*
+/\*
 After you define an array to a certain size, don't try to store more elements than were
 allowed in the original size.
 After defining name as just done, the strcpy() function lets you store a string longer than Italy in name,
@@ -4036,24 +4020,24 @@ Doing this makes room for a string much longer than Italy if you want to store a
 For example, you might want to use gets() to get a string from the user that could easily be longer than Italy.
 Make your arrays big enough to hold enough values, but don't overdo it.
 
-/*
+/_
 To define an array, you must add brackets ([]) after the name and specify the maximum number of
 elements you will ever store in the array:
-*/*
+_/\*
 
 ```c
 int o[25]; // Defines the array
 ```
 
-/*
+/_
 If you want to initialize a character array with an initial string, you know that you can do this:
-*/*
+_/\*
 
 ```c
 char name6[6] = "Italy"; // Leave room for the null!
 ```
 
-/*
+/\*
 After you define an array to a certain size, don't try to store more elements than were
 allowed in the original size.
 After defining name as just done, the strcpy() function lets you store a string longer than Italy in name,
@@ -4095,7 +4079,6 @@ No null zero is at the end of the array because null zeroes terminate only strin
 | 90               | intArr[3]                                       |
 | 120              | intArr[4]                                       |
 
-
 The following statement defines and initializes 2 arrays, a floating-point array and a double floating-point array.
 
 Because C is free-form, you can continue the initialization list over more than one line, as is done for annualSal.
@@ -4123,7 +4106,6 @@ The following name definition puts a string in name:
 ```c
 char italCity[7] = {'V', 'e', 'r', 'o', 'n', 'a', '\0'};
 ```
-
 
 You have to admit that initializing such a character array with a string is easier to do like this:
 
@@ -4229,7 +4211,7 @@ main()
 }
 ```
 
-```
+```text
 What did the player score in game 7? 21
 What did the player score in game 8? 8
 What did the player score in game 9? 11
@@ -4282,13 +4264,13 @@ in element 14 of the balance array.
 
 The customer balance program might fill the two arrays from disk data when the program first starts.
 As a customer places a new order, it’s your program’s job to find that customer balance and stop the
-order if the customer owes more than $100 already (the deadbeat!).
+order if the customer owes more than \$100 already (the deadbeat!).
 
 In a nutshell, here is the program’s job:
 
 1. Ask for a customer ID number (the key).
 2. Search the array for a customer balance that matches the key value.
-3. Inform you if the customer already owes more than $100.
+3. Inform you if the customer already owes more than \$100.
 
 The following program does just that.
 Actually, the program maintains a list of only 10 customers because you’re not yet ready to tackle disk input
@@ -4361,7 +4343,7 @@ This program’s attempted customer search has three possibilities:
 
 Here are three runs of the program showing each of the three possibilities:
 
-```
+```text
 *** Customer Balance Lookup ***
 What customer number do you need to check? 313
 
@@ -4371,8 +4353,8 @@ What customer number do you need to check? 313
 What customer number do you need to check? 891
 ** You must have typed an incorrect customer ID.
 
-	ID 891 was not found in list.
-	
+ ID 891 was not found in list.
+
 ***Customer Balance Lookup***
 What customer number do you need to check? 475
 
@@ -4380,16 +4362,12 @@ What customer number do you need to check? 475
 No additional credit
 ```
 
-
 The first part of the program defines and initializes two arrays with the customer ID numbers and
 matching balances.
 As you know, when you first define arrays, you can use the assignment operator, =, to assign the array’s data.
 After printing a title and asking for a customer ID number, the program uses a for loop to step
 through the parallel arrays looking for the user’s entered customer ID.
 If it discovers the ID, a found variable is set to true (1) for later use. Otherwise, found remains false (0).
-
-
-
 
 The program’s for loop might end without finding the customer.
 The code following the for loop would have no way of knowing whether the for’s break triggered
@@ -4499,7 +4477,6 @@ The bubble sort isn’t extremely efficient compared to other sorts, but it’s 
 The name bubble sort comes from the nature of the sort.
 During a sort, the lower values “float” up the list each time a pass is made through the data.
 
-
 Before Sorting:
 50
 32
@@ -4587,7 +4564,7 @@ main()
 }
 ```
 
-```
+```text
 Here is the list before the sort
 
 64
@@ -4633,7 +4610,6 @@ nums[inner] = nums[outer]; // Does NOT swap the
 nums[outer] = nums[inner]; // two values
 The first assignment wipes out the value of nums[inner] so that the second assignment has nothing
 to assign. Therefore, a third variable is required to swap any two variables.
-
 
 If you wanted to sort the list in descending order, you would only have to change the
 less-than sign (<) to a greater-than sign (>) right before the swapping code.
@@ -4692,13 +4668,13 @@ unsorted array.
 For instance, if you were searching within the previous list for customer ID 998,
 your program would have to search all six values before realizing that 998 was not in the list.
 
-*/
+\*/
 
-/*
+/\*
 The following program is a combination of the customer ID searching program shown in the previous
 chapter and the sorting routine shown in this chapter.
 The customer ID values are sorted, and then the user is asked for a customer ID to find.
-The program then determines whether the customer’s balance is less than $100. However,
+The program then determines whether the customer’s balance is less than \$100. However,
 if the ID is not in the list, the program terminates the search early.
 Keep in mind that having only 10 array values makes this program seem like overkill,
 but if there were tens of thousands of customers, the code would not be different.
@@ -4817,7 +4793,7 @@ The array subscripts let you step through the array and swap values, when needed
 • Don’t swap the values of 2 variables unless you introduce a third temporary variable to hold the in-between value.
 • Sorting routines doesn't have to be hard; start with the 1 listed in this chapter, and adapt it to your own needs.
 • Don’t forget to keep your arrays sorted. You’ll speed up searching for values.
-*/
+\*/
 
 ## Solving the Mystery of Pointers
 
@@ -4850,26 +4826,26 @@ Before going further, you need to learn two new operators.
 | Operator | Description            |
 | -------- | ---------------------- |
 | &        | Address of operator    |
-| *        | Dereferencing operator |
+| \*       | Dereferencing operator |
 
-You’ve seen the * before. How does C know the difference between multiplication and dereferencing?
+You’ve seen the \* before. How does C know the difference between multiplication and dereferencing?
 The context of how you use them determines how C interprets them.
 You’ve also seen the (&) before scanf() variables.
 The & in scanf() is the address-of operator.
 scanf() requires that you send it the address of non-array variables.
 
 The following shows how you would define an integer and a floating-point variable:
-*/
+\*/
 int num;
 float value;
 
-/*
-To define an integer pointer variable and a floating-point pointer variable, you simply insert an *:
+/_
+To define an integer pointer variable and a floating-point pointer variable, you simply insert an_:
 */
-int *pNum; // Defines two pointer variables
-float *pValue;
+int*pNum; // Defines two pointer variables
+float \*pValue;
 
-/*
+/\*
 There’s nothing special about the names of pointer variables.
 Many C programmers like to preface pointer variable names with a p,
 as done here, but you can name them anything you like.
@@ -4889,7 +4865,7 @@ The address-of operator reads just like it sounds.
 The second line that follows tells C to put the address of age into pAge.
 
 int age = 19; // Stores a 19 in age
-int * pAge = &age; // Links up the pointer
+int \* pAge = &age; // Links up the pointer
 
 You have no idea exactly what address C will store age at.
 However, whatever address C uses, pAge will hold that address.
@@ -4915,16 +4891,15 @@ Figure 24.1 shows what the resulting memory looks like.
 Just because you define two variables back to back doesn't mean that C stores them back to back in memory.
 C might store them together, but it also might not.
 
-
 Never try to set the address of one type of variable to a pointer variable of a different type.
 C lets you assign the address of one type of variable only to a pointer defined with the same data type.
 
-The * isn’t part of a pointer variable’s name.
-You use the * dereferencing operator for several things,
-but in the pointer definition, the * exists only to tell C that the variable is a pointer, not a regular variable.
+The _isn’t part of a pointer variable’s name.
+You use the_ dereferencing operator for several things,
+but in the pointer definition, the \* exists only to tell C that the variable is a pointer, not a regular variable.
 
 The following four statements do exactly the same thing as the previous two statements.
-Notice that you don’t use * to store the address of a variable in a pointer variable
+Notice that you don’t use \* to store the address of a variable in a pointer variable
 unless you are also defining the pointer at the same time.
 
 ```c
@@ -4934,11 +4909,11 @@ age = 19; //Stores 19 in age
 pAge = &age; // Links up the pointer
 ```
 
-Using the Dereferencing *
+Using the Dereferencing _
 As soon as you link up a pointer to another variable,you can work with the other value by dereferencing the pointer.
 Programmers never use an easy word when a hard one will do just as well (and confuse more people).
 Dereferencing just means that you use the pointer to get to the other variable.
-When you dereference, use the * dereferencing operator.
+When you dereference, use the_ dereferencing operator.
 In a nutshell, here are two ways to change the value of age
 (assuming that the variables are defined as described earlier):
 
@@ -5044,7 +5019,7 @@ main()
 }
 ```
 
-```
+```text
 How many kids are you taking to the water park? 3
 Do you have a discount ticket for the park?
 Enter E for Employee Discount, S for Sav-More Discount, and N for No
@@ -5071,11 +5046,11 @@ As you’ll learn in the next chapter, arrays are nothing more than pointers in 
 Because pointers offer more flexibility than arrays, many C programmers stop using arrays when they master pointers.
 
 • Use the & to produce the address of a variable.
-• Use the * to define a pointer variable and to dereference a pointer variable. *pAge
+• Use the *to define a pointer variable and to dereference a pointer variable.*pAge
 and age reference the same memory location, as long as you’ve made pAge point to age.
 • Don’t try to make a pointer variable of one data type point to a variable of a different data type.
 • Don’t worry about the exact address that C uses for variable storage. If you use &, C takes care of the rest.
-• Don’t forget to use * when dereferencing your pointer, or you’ll get the wrong value.
+• Don’t forget to use \* when dereferencing your pointer, or you’ll get the wrong value.
 • Don’t get too far ahead. You will fully appreciate pointers only after programming in C for a while.
 
 ## Arrays and Pointers
@@ -5102,8 +5077,6 @@ C sets up a pointer to the array and names that point to vals.
 You can never change the contents of vals; it is like a fixed pointer variable whose address C locks in.
 Figure 25.1 shows you what C really does when you define and initialize vals.
 
-
-
 | Vals    | Memory | Address |
 | ------- | ------ | ------- |
 | vals    | 46204  | 32054   |
@@ -5123,10 +5096,10 @@ Because the array name is a pointer (that can’t be changed), you can print the
 printf("The first value is %d.\n", vals[0]);
 
 But more important for this chapter, you can print the first array value like this, too:
-printf("The first value is %d.\n", *vals);
+printf("The first value is %d.\n", \*vals);
 
 As you’ll see in a moment, this is also equivalent and accesses vals[0]:
-printf("The first value is %d.\n", *(vals+0));
+printf("The first value is %d.\n", \*(vals+0));
 
 The fact that an array is a fixed constant pointer is why you can’t put just an array name
 on the left side of an equals sign.
@@ -5147,16 +5120,15 @@ printf("The fifth array value is %d.\n", vals[4]);
 
 does exactly the same as this set:
 
-printf("The first array value is %d.\n", *(vals + 0));
-printf("The second array value is %d.\n", *(vals +1));
-printf("The third array value is %d.\n", *(vals + 2));
-printf("The fourth array value is %d.\n", *(vals + 3));
-printf("The fifth array value is %d.\n", *(vals + 4));
+printf("The first array value is %d.\n", _(vals + 0));
+printf("The second array value is %d.\n",_(vals +1));
+printf("The third array value is %d.\n", _(vals + 2));
+printf("The fourth array value is %d.\n",_(vals + 3));
+printf("The fifth array value is %d.\n", \*(vals + 4));
 
 If vals is a pointer constant (and it is),
 and the pointer constant holds a number that is the address to the array’s first element,
 adding 1 or 2 (or whatever) to vals before dereferencing vals adds 1 or 2 to the address vals points to.
-
 
 If you’re wondering about the importance of all this mess, hang tight.
 In a moment, you’ll see how C’s pointer notation lets you make C act almost as if it has string variables.
@@ -5165,14 +5137,14 @@ The preceding printf() statements appear to add 1 to the address inside vals to 
 memory location, but C helps you out here.
 C adds one int size when you add 1 to an int pointer
 (and one double size when you add 1 to a double pointer, and so on).
-The expression *(vals + 2) tells C that you want the third integer in the list that vals points to.
+The expression \*(vals + 2) tells C that you want the third integer in the list that vals points to.
 
 Characters and Pointers
 The following two statements set up almost the same thing in memory.
 The only difference is that, in the second statement, pName is a pointer variable, not a pointer constant:
 
 char name[] = "Andrew B. Mayfair"; // name points to A
-char * pName = "Andrew B. Mayfair"; // pName points to A
+char \* pName = "Andrew B. Mayfair"; // pName points to A
 
 Because pName is a pointer variable, you can put it on the left side of an equals sign!
 Therefore, you don’t always have to use strcpy() if you want to assign a character pointer a new string value.
@@ -5206,7 +5178,7 @@ Never set up a character pointer variable like this:
 
 main()
 {
-char * name = "Tom Roberts";
+char \* name = "Tom Roberts";
 // Rest of program follows...
 
 and then later let the user enter a new string with gets() like this:
@@ -5232,7 +5204,7 @@ The easiest way to do this is to reserve a character array and
 then assign a character pointer to the beginning element of that array:
 
 char input[81]; // Holds a string as long as 80 characters
-char *iptr = input; // Also could have done char *iptr = &input[0]
+char *iptr = input; // Also could have done char*iptr = &input[0]
 Now you can input a string by using the pointer as long as
 the string entered by the user is not longer than 81 bytes long:
 
@@ -5251,7 +5223,6 @@ If the user enters a string less than 81 characters, iptr points to that string 
 However, if the user goes wild and enters a string 200 characters long, iptr points only to the first 80,
 followed by a null zero at the 81st position that fgets() added, and the rest of the user’s input is ignored.
 
-
 You can use fgets() to read strings from data files. The third value of fgets() can be a disk file pointer,
 but you’ll learn about disk pointers later in the book.
 For now, use stdin as the third value you send to fgets() so that fgets() goes to the keyboard for input
@@ -5263,11 +5234,11 @@ Arrays of Pointers
 
 If you want to use a bunch of pointers, create an array of them.
 An array of pointers is just as easy to define as an array of any other kind of data,
-except that you must include the * operator after the data type name.
+except that you must include the \* operator after the data type name.
 The following statements reserve an array of 25 integer pointers and an array of 25 character pointers:
 
-int * ipara[25]; // 25 pointers to integers
-char * cpara[25]; // 25 pointers to characters
+int _ipara[25]; // 25 pointers to integers
+char_ cpara[25]; // 25 pointers to characters
 The array of characters is most interesting because you can store a list of strings in the array.
 More accurately, you can point to various strings.
 The following program illustrates two things:
@@ -5358,7 +5329,7 @@ main()
 }
 ```
 
-```
+```text
 *** Oscar Season 2012 is here! ***
 
 Time to rate this year's best picture nominees:
@@ -5434,7 +5405,7 @@ The heap is the collection of unused memory in your computer.
 The memory left over—after your program, your program's variables,
 and your operating system's workspace—comprises your computer's available heap space, as Figure 26.1 shows.
 
-```
+```text
 +------------------+
 | Operating System |
 +------------------+
@@ -5457,7 +5428,6 @@ The free heap memory is called free heap or unallocated heap memory.
 The part of the heap in use by your program at any one time is called the allocated heap.
 Your program might use varying amounts of heap space as the program executes.
 
-
 if one statement in your program grabs heap memory,
 and then the very next statement also grabs another section of heap memory,
 that second section of the heap might not physically reside right after the first section you allocated.
@@ -5467,7 +5437,6 @@ You know only that the memory comes and goes from the heap.
 
 The next section of heap memory you allocate will not necessarily follow the first,
 so you shouldn't count on anything like that.
-
 
 Your operating system uses heap memory along with your program.
 If you work on a networked computer or use a multitasking operating environment such as Windows,
@@ -5521,7 +5490,6 @@ As we move into networked and windowed environments, memory becomes even more pr
 Your programs can't allocate huge arrays for those rare occasions when a user might need that much memory.
 Your program would solely use all that memory, and other tasks could not access that allocated memory.
 
-
 The heap enables your program to use only as much memory as it needs.
 When your user needs more memory (for instance, to enter more data), your program can allocate the memory.
 When your user is finished using that much memory
@@ -5531,7 +5499,6 @@ How Do I Allocate the Heap?
 You must learn only two new functions to use the heap.
 The malloc() (for memory allocate) function allocates heap memory,
 and the free() function deallocates heap memory.
-
 
 Be sure to include the stdlib.h header file in all the programs you write that use malloc() and free().
 We might as well get to the rough part.
@@ -5545,10 +5512,10 @@ You first need a pointer to the 10 heap values.
 The values are integers, so you need an integer pointer.
 You need to define the integer pointer like this:
 
-int * temps; // Will point to the first heap value
+int \* temps; // Will point to the first heap value
 Here is how you can allocate 10 integers on the heap using malloc():
 
-temps = (int *) malloc(10 * sizeof(int)); // Yikes!
+temps = (int _) malloc(10_ sizeof(int)); // Yikes!
 That's a lot of code just to get 10 integers.
 The line is actually fairly easy to understand when you see it broken into pieces.
 The malloc() function requires only a single value:
@@ -5562,7 +5529,7 @@ you must tell malloc() that you want 10 sets of bytes allocated,
 with each set of bytes being enough for an integer.
 Therefore, the previous line included the following malloc() function call:
 
-malloc(10 * sizeof(int))
+malloc(10 \* sizeof(int))
 
 This part of the statement told malloc() to allocate, or set aside, 10 contiguous integer locations on the heap.
 In a way, the computer puts a fence around those 10 integer locations so that subsequent
@@ -5591,12 +5558,12 @@ Also remember that each set of allocated memory will be contiguous,
 so the 10 integers will follow each other just as if you allocated temps as a 10-integer array.
 The malloc() allocation still has one slight problem.
 We still have to explain the left portion of the temperature malloc().
-What is the (int *) for?
-The (int *) is a typecast.
+What is the (int _) for?
+The (int_) is a typecast.
 You've seen other kinds of typecasts in this book.
 To convert a float value to an int, you place (int) before the floating-point value, like this:
 aVal = (int)salary;
-The * inside a typecast means that the typecast is a pointer typecast. malloc() always returns a character pointer.
+The \* inside a typecast means that the typecast is a pointer typecast. malloc() always returns a character pointer.
 If you want to use malloc() to allocate integers, floating points, or any kind of data other than char,
 you have to typecast the malloc() so that the pointer variable that receives the allocation (such as temps)
 receives the correct pointer data type.
@@ -5626,7 +5593,7 @@ or your program might have previously allocated everything already.
 If malloc() fails, its pointer variable points to a null value, 0.
 Therefore, many programmers follow a malloc() with an if, like this:
 
-temps = (int *) malloc(10 * sizeof(int));
+temps = (int _) malloc(10_ sizeof(int));
 if (temps == 0)
 {
 printf("Oops! Not Enough Memory!\n");
@@ -5669,7 +5636,7 @@ But the forecaster has a different number of readings for each different city.
 An array of pointers is useful for such a problem.
 Here is how you could allocate an array of 50 pointers:
 
-int * temps[50]; // 50 integer pointers
+int \* temps[50]; // 50 integer pointers
 
 The array will not hold 50 integers (because of the dereferencing operator in the definition);
 instead, the array holds 50 pointers.
@@ -5684,7 +5651,7 @@ for (ctr = 0; ctr < 50; ctr++)
 puts("How many readings for the city?")
 scanf(" %d", &num);
 // Allocate that many heap values
-temps[ctr] = (int *)malloc(num * sizeof(int));
+temps[ctr] = (int _)malloc(num_ sizeof(int));
 // This next section of code would ask for each temperature
 // reading for the city
 }
@@ -5810,23 +5777,6 @@ Each array element can point to a different amount of heap space.
 • Don't always rely on regular arrays to hold a program's data.
 Sometimes a program needs data for just a short time, and using the heap makes better use of your memory resources.
 
-### Maximizing Your Computer's Memory
-
-The heap is the collection of unused memory in your computer.
-The memory left over—after your program, your program's variables,
-and your operating system's workspace—comprises your computer's available heap space, as Figure 26.1 shows.
-
-╓------------------╖
-║ Operating System ║
-╟------------------╢
-║ Your C Program   ║
-╟------------------╢
-║ Your Variables   ║
-╟══════════════════╢
-║       Heap       ║
-╚══════════════════╝
-FIGURE 26.1 The heap is unused memory.
-
 Many times you'll want access to the heap,
 because your program will need more memory than you initially defined in variables and arrays.
 
@@ -5878,7 +5828,6 @@ The heap memory your program uses can grow or shrink as needed.
 If you need another 100 elements to hold a new batch of customers, your program can allocate that new
 batch at runtime without needing another compilation.
 
-
 Commercial programs such as spreadsheets and word processors must rely heavily on the heap.
 After all, the programmer who designs the program cannot know exactly how large or small a spreadsheet
 or word processing document will be.
@@ -5916,10 +5865,10 @@ You first need a pointer to the 10 heap values.
 The values are integers, so you need an integer pointer.
 You need to define the integer pointer like this:
 
-int * temps; // Will point to the first heap value
+int \* temps; // Will point to the first heap value
 
 Here is how you can allocate 10 integers on the heap using malloc():
-temps = (int *) malloc(10 * sizeof(int)); // Yikes!
+temps = (int _) malloc(10_ sizeof(int)); // Yikes!
 
 The malloc() function requires only a single value: the number of bytes you want allocated.
 Therefore, if you wanted 10 bytes, you could do this: malloc(10);
@@ -5933,7 +5882,7 @@ you must tell malloc() that you want 10 sets of bytes allocated,
 with each set of bytes being enough for an integer.
 Therefore, the previous line included the following malloc() function call:
 
-malloc(10 * sizeof(int))
+malloc(10 \* sizeof(int))
 
 This part of the statement told malloc() to allocate, or set aside, 10 contiguous integer locations on the heap.
 
@@ -5945,12 +5894,12 @@ malloc() always performs the following two steps
 
 2. Assigns your pointer to the first allocated value
 
-What is the (int *) for?
-The (int *) is a typecast.
+What is the (int _) for?
+The (int_) is a typecast.
 To convert a float value to an int, you place (int) before the floating-point value, like this:
 aVal = (int)salary;
 
-The * inside a typecast means that the typecast is a pointer typecast. malloc() always returns a character pointer.
+The \* inside a typecast means that the typecast is a pointer typecast. malloc() always returns a character pointer.
 If you want to use malloc() to allocate integers, floating points, or any kind of data other than char,
 you have to typecast the malloc() so that the pointer variable that receives the allocation (such as temps)
 receives the correct pointer data type.
@@ -5979,7 +5928,7 @@ or your program might have previously allocated everything already.
 If malloc() fails, its pointer variable points to a null value, 0.
 Therefore, many programmers follow a malloc() with an if, like this:
 
-temps = (int *) malloc(10 * sizeof(int));
+temps = (int _) malloc(10_ sizeof(int));
 if (temps == 0)
 {
 printf("Oops! Not Enough Memory!\n");
@@ -6021,7 +5970,7 @@ But the forecaster has a different number of readings for each different city.
 An array of pointers is useful for such a problem.
 Here is how you could allocate an array of 50 pointers:
 
-int * temps[50]; // 50 integer pointers
+int \* temps[50]; // 50 integer pointers
 
 The array will not hold 50 integers (because of the dereferencing operator in the definition);
 instead, the array holds 50 pointers.
@@ -6036,7 +5985,7 @@ for (ctr = 0; ctr < 50; ctr++)
 puts("How many readings for the city?")
 scanf(" %d", &num);
 // Allocate that many heap values
-temps[ctr] = (int *)malloc(num * sizeof(int));
+temps[ctr] = (int _)malloc(num_ sizeof(int));
 // This next section of code would ask for each temperature
 // reading for the city
 }
@@ -6157,7 +6106,6 @@ Although you would want to be able to initialize and print individual items with
 you would also want to access the customer record as a whole,
 such as when you would write it to a customer disk file.
 
-
 Other programming languages have equivalent data groupings called records.
 The designers of C wanted to call these data groupings structures,
 however, so that’s what they are in C.
@@ -6203,9 +6151,9 @@ but most C programmers don’t do so.
 If you want to define a variable for the structure at the same time you declare the structure format itself,
 insert one or more variable names before the struct statement’s closing semicolon.
 
-*/
+\*/
 
-/*
+/\*
 Let’s say you’re writing a program to track a simple retail computer inventory.
 You need to track a computer manufacturer and model, amount of disk space (in megabytes),
 amount of memory space (in megabytes), quantity, cost, and retail price.
@@ -6244,66 +6192,70 @@ Put the structure name before a variable list.
 Because there is no data type named invStruct, you must tell C that invStruct is a struct name.
 You can define three structure variables like this:
 
-#include "c:\cprogramming files\inv.h"
+## include "c:\cprogramming files\inv.h"
+
 main()
 {
-    struct invStruct item1, item2, item3;
+struct invStruct item1, item2, item3;
 // Rest of program would follow...
 
 Now you can put data into three variables. These variables are structure variables named item1,
 item2, and item3. If you wanted to define 500 structure variables, you would use an array:
 
-#include "c:\cprogramming files\inv.h"
+```c
+## include "c:\cprogramming files\inv.h"
+
 main()
 {
-    struct invStruct items[500];
+struct invStruct items[500];
 // Rest of program would follow...
+```
 
 Remember, the structure definition must go in the INV.H header file if you take this approach.
 Otherwise, you must place the structure definition directly inside the program before the structure variables,
 like this:
-*/
+\*/
 
 struct invStruct1 {
-    char manuf[25]; // Manufacturer name
-    char model[15]; // Model code
-    int diskSpace; // Disk size in Gigabytes
-    int memSpace; // Memory Space in Gigabytes
-    int ports; // The number of USB ports on the system
-    int quantity; // Number in inventory
-    float cost; // Cost of computer
-    float price; // Retail price of computer
+char manuf[25]; // Manufacturer name
+char model[15]; // Model code
+int diskSpace; // Disk size in Gigabytes
+int memSpace; // Memory Space in Gigabytes
+int ports; // The number of USB ports on the system
+int quantity; // Number in inventory
+float cost; // Cost of computer
+float price; // Retail price of computer
 };
 //main()
 //{
 struct invStruct items[500];
 // Rest of program would follow...
-/*
+/\*
 As long as the struct definition appears before main(), you can define invStruct structure
 variables throughout the rest of the program in any function you write.
 (The last part of this book explains how to write programs that contain more functions than main().)
 Perhaps you will need pointers to three structures instead of structure variables. Define them like this:
 
- main()
+main()
 {
-    struct invStruct *item1, *item2,*item3;
+struct invStruct *item1,*item2,\*item3;
 // Rest of program would follow
 
-*/
+\*/
 
-/*
+/\*
 item1, item2, and item3 now can point to three structure variables.
 You can then reserve heap memory for the structures instead of using actual variables.
 (sizeof() works for structure variables to allow for heap structure data.)
 The following three statements reserve three heap structure areas
 and make item1, item2, and item3 point to those three heap values:
 
-item1 = (struct invStruct *)malloc(sizeof(invStruct));
-item2 = (struct invStruct *)malloc(sizeof(invStruct));
-item3 = (struct invStruct *)malloc(sizeof(invStruct));
-*/
+item1 = (struct invStruct _)malloc(sizeof(invStruct));
+item2 = (struct invStruct_)malloc(sizeof(invStruct));
+item3 = (struct invStruct _)malloc(sizeof(invStruct));
+_/
 
-/*
+/\*
 Putting Data in Structure Variables
 A new operator, the dot operator, lets you put data in a structure variable's individual members.
 
@@ -6317,9 +6269,9 @@ The dot operator puts data only in named structure variables.
 
 If you want to put data in a heap structure pointed to by a structure pointer variable,
 you must use the structure pointer operator, ->.
-*/
+\*/
 
-/*
+/\*
 The following program defines an array of three structure variables using a bookInfo structure tag
 shown that is defined in the bookInfo.h header file presented first.
 
@@ -6461,7 +6413,6 @@ Their types determine how you can access them.
 If you work with a sequential-access file, you have to read or write the file in the order of the data.
 In a random-access file, you can jump around, reading and writing any place in the file.
 
-
 A sequential file is like a video tape, and a random-access file is like a DVD or BluRay.
 You have to watch a movie in sequence on a tape (or fast-forward through it in order),
 whereas you can skip to different chapters on a DVD or a Blu-Ray.
@@ -6487,8 +6438,7 @@ As with any variable, you can name file pointers anything you want.
 Suppose you want to open an employee file. Before the fopen(), you must define a file pointer variable.
 If you called the file pointer fptr, here is how you would define a file pointer:
 
-FILE * fptr; // Defines a file pointer named fptr
-
+FILE \* fptr; // Defines a file pointer named fptr
 
 Most C programmers define their file pointers before main().
 This makes the file pointer global, which is a fancy term meaning that the entire program can use the file.
@@ -6499,7 +6449,6 @@ header file when your program uses the disk for data.
 After you define a file pointer, you can connect that pointer to a file with fopen().
 After you specify fopen(), you can use the file throughout the rest of the program.
 
-
 If you don't have a C: drive, change the C: in these examples to a different drive letter.
 In fact, if you want to put your files in a specific folder but are not sure of the path,
 right-click a file in that folder and select Properties from the menu. You should see the
@@ -6507,11 +6456,12 @@ directory path of the folder, which you can then use in your fopen() statement.
 
 Here is the way to open a file named C:\cprograms\cdata.txt.
 
-#include <stdio.h>
-FILE *fptr; // Defines a file pointer
+## include <stdio.h>
+
+FILE \*fptr; // Defines a file pointer
 main()
 {
-    fptr = fopen("c:\cprograms\cdata.txt", "w");
+fptr = fopen("c:\cprograms\cdata.txt", "w");
 // rest of program would follow
 
 fclose (fptr); // Always close files you've opened
@@ -6533,11 +6483,11 @@ For example, if you attempt to open a file on a disk drive that doesn't exist, f
 The "w" (the second argument in the previous code's fopen()) means write.
 The second argument of fopen() must be one of the string mode values in Table 28.1.
 
-| File Mode | Description                                                  |
-| --------- | ------------------------------------------------------------ |
-| r         | Open a file for reading. If a file is in reading mode, then no data is deleted if a file is already present on a system. |
-| w         | Open a file for writing. If a file is in writing mode, then a new file is created if a file doesn't exist at all.  If a file is already present on a system, then all the data inside the file is truncated,and it is opened for writing purposes. |
-| a         | Open a file in append mode. If a file is in append mode, then the file is opened. The content within the file doesn't change. |
+| File Mode | Description                                                                                                                                                                                                                                       |
+| --------- | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
+| r         | Open a file for reading. If a file is in reading mode, then no data is deleted if a file is already present on a system.                                                                                                                          |
+| w         | Open a file for writing. If a file is in writing mode, then a new file is created if a file doesn't exist at all. If a file is already present on a system, then all the data inside the file is truncated,and it is opened for writing purposes. |
+| a         | Open a file in append mode. If a file is in append mode, then the file is opened. The content within the file doesn't change.                                                                                                                     |
 
 Using Sequential Files
 You'll do only three things with a sequential file: create it, read it, and add to it (write to it).
@@ -6603,7 +6553,7 @@ main()
 }
 ```
 
-```
+```text
 Here is the collection of books:
 #1: 10 Count Trivia by Dean Miller
 It is 250 pages and costs $14.99
@@ -6630,7 +6580,6 @@ Now that you can write data to a file, how would you go about getting that infor
 Use fgets() to read the contents of the file.
 fgets() is nothing more than a gets() that you can direct to a disk file.
 fgets() reads lines from a file into character arrays (or allocated heap memory pointed to with a character pointer).
-
 
 Think of the f at the beginning of fputs() and fgets() as standing for file.
 puts() and gets() go to the screen and keyboard, respectively; fputs() and fgets() write and read their data from files.
@@ -6718,7 +6667,7 @@ main() {
 }
 ```
 
-```
+```text
 Here is the collection of books:
 #1: 10 Count Trivia by Dean Miller
 It is 250 pages and costs $14.99
@@ -6777,8 +6726,6 @@ Opening Random Files
 To read or write a file randomly, you must open the file randomly.
 
 Table 29.1 lists the modes that access random files.
-
-
 
 As you can see, the cornerstone of random-access files is the use of the plus sign
 
@@ -6849,7 +6796,7 @@ origin tells fseek() where to start seeking.
 
 | Sr.No. | Constant & Description                          |
 | ------ | ----------------------------------------------- |
-| 1      | SEEK_SET  - Beginning of file                   |
+| 1      | SEEK_SET - Beginning of file                    |
 | 2      | SEEK_CUR - Current position of the file pointer |
 |        | SEEK_END - End of file                          |
 
@@ -6858,7 +6805,6 @@ TABLE 29.2 origin Values That Can Appear in fseek()
 Table 29.2's values are in uppercase, which implies that they're defined somewhere.
 
 They're defined in stdio.h using #define directives.
-
 
 Parameters
 
@@ -6880,11 +6826,9 @@ If you position the file pointer over existing data
 
 (using SEEK_SET and SEEK_CUR) and then write new data, the new data replaces the existing data.
 
-
 Use fseek() for random-access files only.
 
 Sequential files can be accessed only in the order of the data.
-
 
 The following program opens a file for random-access mode, writes the letters A through Z to the file,
 
@@ -6940,9 +6884,9 @@ As you can see, fputc() is a great function for outputting individual characters
 
 fgetc() reads individual characters from a file.
 
-fputc() and fgetc() are to    putc()    and    getc()
+fputc() and fgetc() are to putc() and getc()
 
-what fputs() and fgets() are to    puts()    and    gets().
+what fputs() and fgets() are to puts() and gets().
 
 So far, you might not see a purpose for random-access files.
 
@@ -6956,7 +6900,7 @@ Assuming that the file of letters still resides on the disk from the last progra
 
 this next program asks the user which position he or she wants to change.
 
-The program then positions the file pointer with fseek() and writes an * at that point before
+The program then positions the file pointer with fseek() and writes an \* at that point before
 
 using fseek() to return to the beginning of the file and printing it again.
 
@@ -7000,7 +6944,7 @@ main()
 }
 ```
 
-The program prints the contents of the file after the * is written at the position indicated by the user.
+The program prints the contents of the file after the \* is written at the position indicated by the user.
 
 Here is a sample session:
 
@@ -7011,7 +6955,7 @@ The next letter is D.
 The next letter is E.
 The next letter is F.
 The next letter is G.
-The next letter is *.
+The next letter is \*.
 The next letter is I.
 The next letter is J.
 The next letter is K.
@@ -7034,7 +6978,6 @@ The next letter is Z.
 As you can see, the eighth position of the alphabetical file, the letter H, now contains an asterisk.
 
 The rest of the file remains unchanged.
-
 
 When you open a file in random-access mode, you can read and write to that file in any order you need to.
 
@@ -7059,9 +7002,9 @@ can read or write from the beginning, middle, or end.
 
 If your program does a lot, break it into several functions.
 
-​    Each function should do one primary task.
+​ Each function should do one primary task.
 
-​    For instance, if you were writing a C program to assign an ID number to a new employee, get the
+​ For instance, if you were writing a C program to assign an ID number to a new employee, get the
 
 person's contact information, and then add him or her to the payroll, you could write all of this in one
 big function—all in main()—as the following program outline shows:
@@ -7148,7 +7091,6 @@ Even though this program outline is longer than the previous one, this one is be
 therefore, easier to maintain.
 
 The only thing main() does is control the other functions by showing an overview of how they're called.
-
 
 main() acts almost like a table of contents for the program.
 
@@ -7286,9 +7228,7 @@ half (int i) // Recieves the value of i
 }
 ```
 
-
-
-```
+```text
 Please enter an integer... 28
 Your value halved is 14.
 In main(), i is still 28.
@@ -7350,7 +7290,6 @@ The opposite of a local variable is a global variable, whose value is usable in 
 Global variables are frowned upon.
 
 Local variables are safer because you can limit their access to only functions that need to use them.
-
 
 • Define local variables after a block's opening brace.
 
@@ -7453,7 +7392,7 @@ half (int i) // Recieves the value of i
 }
 ```
 
-```
+```text
 Please enter an integer... 28
 Your value halved is 14.
 In main(), i is still 28.
@@ -7461,7 +7400,7 @@ In main(), i is still 28.
 
 Study this first line of the half() function:
 
-half(int i) /* Receives value of i */
+half(int i) /_Receives value of i_/
 
 Notice that you must put the data type (int) inside the receiving function's parameter list.
 
@@ -7473,8 +7412,7 @@ listed as well, even if they were all the same type.
 
 Here is a function that receives three variables: a floating point, a character array, and an integer:
 
-aFun(float x, char name[15], int age) /* Receives three arguments */
-
+aFun(float x, char name[15], int age) /_Receives three arguments_/
 
 Passing by value protects a variable.
 
@@ -7538,7 +7476,7 @@ change(char name[15]) // Recieves the value of i
 }
 ```
 
-```
+```text
 Back in main(), the name is now XXXXXXXXXXXXXX.
 ```
 
@@ -7579,14 +7517,14 @@ half (int *i) // Receives the address of i
 }
 ```
 
-```
+```text
 Please enter an integer... 28
 Your value halved is 14.
 In main(), i is now 14.
 ```
 
 It looks strange, but if you want to pass a non-array by address, precede it in the passing function with
-an & (address-of) symbol and then put a * (dereferencing) symbol in front of the variable everywhere
+an & (address-of) symbol and then put a \* (dereferencing) symbol in front of the variable everywhere
 it appears in the receiving function.
 
 If you think you're now passing a pointer to a function, you're exactly right.
@@ -7653,7 +7591,7 @@ changeSome (int i, float *newX, int iAry[5])
 }
 ```
 
-```
+```text
 Here are main()'s variables before the function:
 i is 10
 x is 20.5
@@ -7684,8 +7622,7 @@ Arrays are passed by address, which means that if the receiving function changes
 the array variables are also changed in the calling function.
 
 You can pass non-array variables by address by preceding them with the address-of operator, &,
-and receiving them with the dereference operator, *.
-
+and receiving them with the dereference operator, \*.
 
 • Pass local variables from one function to another if you want the functions to share local variables.
 
@@ -7775,7 +7712,7 @@ float gradeAve(float test1, float test2, float test3)
 }
 ```
 
-```
+```text
 ick here to view code image
 What was the grade on the first test? 95
 What was the grade on the second test? 88
@@ -7789,13 +7726,13 @@ main() had to do something with the value that was returned from gradeAve().
 
 You can put an expression after return as well as variables.
 
-sales = quantity * price;
+sales = quantity \* price;
 
 return (sales);
 
 is identical to this:
 
-return (quantity * price);
+return (quantity \* price);
 The return Data Type
 
 At the beginning of the gradeAve() function, you see float.
@@ -7817,8 +7754,7 @@ int myFun(int a, float x, char c)
 
 and
 
-myFun(int a, float x, char c) /* int is assumed */
-
+myFun(int a, float x, char c) /_int is assumed_/
 
 Guess what? Even main() is assumed to return an int value unless you specify an overriding return data type.
 
@@ -7833,8 +7769,7 @@ you can insert the keyword void for either the return data type or the parameter
 
 Therefore, the first line of a function that neither gets any value nor returns any value might look like this:
 
-void doSomething(void) /* Neither is passed nor returns */
-
+void doSomething(void) /_Neither is passed nor returns_/
 
 main() can't be of type void if you use strict American National Standards Institute (ANSI) C.
 
@@ -7861,11 +7796,11 @@ prototyped return value unless you specify a different return value.
 
 Therefore, these two prototypes both model the same function:
 
-int aFunc(int x, float y); /* 2 passed, one integer returned */
+int aFunc(int x, float y); /_2 passed, one integer returned_/
 
 and
 
-aFunc(int x, float y); /* 2 passed, one integer returned */
+aFunc(int x, float y); /_2 passed, one integer returned_/
 
 Prototypes aren't required if you don't return a value or if you return an integer value,
 but they are strongly recommended.
@@ -7934,7 +7869,7 @@ compNet(float atomWeight, float factor)
 }
 ```
 
-```
+```text
 What is the atomic weight? .0125
 What is the factor? .98
 The net weight is 0.0000
@@ -7953,7 +7888,7 @@ Wrapping Things Up Never pass or return a global variable if you use one.
 Global variables don't have to be passed.
 
 Also, the parameter lists in the calling function, receiving function,
-        and prototype should match in both numbers and data types.
+and prototype should match in both numbers and data types.
 
 (The names of the values don't have to match.)
 
@@ -7980,7 +7915,6 @@ When you call a function, that function returns a value based on the function's 
 
 A function can return a maximum of one value, just like functions that are built in.
 
-
 • Place the return data type before a function name that returns a value.
 
 • The return value appears after a return statement.
@@ -7999,7 +7933,7 @@ Calling a function that returns a value is useless if you do nothing with the re
 
 Better yet, prototype all functions except main().
 
-# B.The Draw Poker Progra
+## B.The Draw Poker Progra
 
 Although the game is simple and straightforward, a lot happens in this program.
 
@@ -8021,8 +7955,6 @@ Note You can also experiment with changes to the program.
 For example, most draw poker programs pay out on a pair only if it is Jacks or better (that is, only a pair of Jacks,
 
 Queens, Kings, or Aces).
-
-
 
 ```c
 // Example poker program from Appendix B of Absolute Beginner's
